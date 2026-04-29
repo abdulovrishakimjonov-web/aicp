@@ -18,9 +18,6 @@
     &-main {
       background: none;
     }
-    &-bottom {
-      backdrop-filter: transparent;
-    }
   }
 
   &-main {
@@ -67,7 +64,7 @@
     opacity: 0.2;
   }
   &-bottom {
-    backdrop-filter: blur(11.199999809265137px);
+    background-color: var(--white);
     &-low {
       padding: 12px 0px;
       display: flex;
@@ -79,7 +76,7 @@
         align-items: center;
         gap: 50px;
         a {
-          @include font(var(--white), 18px, 500);
+          @include font(rgba(15, 23, 42, 1), 18px, 500);
           opacity: 0.8;
         }
       }
@@ -96,10 +93,10 @@
           &__btn {
             padding: 9px 13px;
             border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(26, 21, 21, 0.2);
+            background: rgba(33, 25, 25, 0.1);
             backdrop-filter: blur(8px);
-            color: #fff;
+            color: rgba(15, 23, 42, 1);
             cursor: pointer;
 
             display: flex;
@@ -166,11 +163,11 @@
           );
           transition: all 0.3s ease;
           &:hover {
-            transform: translateY(-2px); 
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
           }
           &:active {
-            transform: scale(0.97); 
+            transform: scale(0.97);
           }
         }
       }

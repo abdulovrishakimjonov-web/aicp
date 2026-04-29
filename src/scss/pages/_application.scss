@@ -13,7 +13,7 @@
           display: flex;
           flex-direction: column;
           gap: 10px;
-          //   margin-bottom: 32px;
+            margin-bottom: 32px;             
 
           h2 {
             @include font(rgba(15, 23, 42, 1), 36px, 600);
