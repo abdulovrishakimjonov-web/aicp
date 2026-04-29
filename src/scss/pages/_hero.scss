@@ -1,0 +1,114 @@
+@use "../config/mixins" as *;
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  margin-bottom: 59px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100svh;
+    padding-top: calc(var(--height-header) + 32px);
+    padding-bottom: 40px;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background: var(--black);
+      opacity: 0.2;
+    }
+
+    &--video,
+    &--image {
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      object-position: center;
+
+      img,
+      video {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        object-position: center;
+      }
+    }
+  }
+
+  &-content {
+    position: absolute;
+    text-align: center;
+    color: var(--white);
+
+    h2 {
+      @include font(var(--white), 72px, 500);
+      span {
+        font-style: italic;
+      }
+    }
+
+    &-btn {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+
+      button {
+        padding: 12px 22px;
+        border-radius: 10px;
+        @include font(var(--white), 18px, 500);
+        cursor: pointer;
+        border: none;
+        transition: all 0.3s ease;
+      }
+
+      .primary {
+        background: var(--rose600);
+        color: var(--white);
+
+        &:hover {
+          transform: translateY(-2px); 
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+        }
+        &:active {
+          transform: scale(0.97); 
+        }
+      }
+
+      .secondary {
+        background: transparent;
+        color: var(--white);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+
+        &:hover {
+          transform: translateY(-2px); 
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+        }
+        &:active {
+          transform: scale(0.97); 
+        }
+      }
+    }
+  }
+}

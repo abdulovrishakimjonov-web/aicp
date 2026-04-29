@@ -1,0 +1,77 @@
+<!-- <div class="sidebar">
+    <div class="sidebar__menu">
+        <h3 class="sidebar__title">O'zbekiston</h3>
+        <ul class="sidebar__list">
+            <li class="sidebar__list--item">
+                <a class="sidebar__link">
+                    Page1
+                </a>
+            </li>
+            <li class="sidebar__list--item">
+                <a class="sidebar__link">
+                    Page2
+                </a>
+            </li>
+            <li class="sidebar__list--item">
+                <a class="sidebar__link">
+                    Page2
+                </a>
+            </li>
+            <li class="sidebar__list--item">
+                <a class="sidebar__link">
+                    Page2
+                </a>
+            </li>
+            <li class="sidebar__list--item has-dropdown">
+                <a href="#" class="sidebar__button">
+                    Page with dropdown
+                    <i class="i-dropdown sidebar__icon"></i>
+                </a>
+                <ul class="sidebar__dropdown">
+                    <li class="sidebar__dropdown--item">
+                        <a href="#" class="sidebar__dropdown--link">
+                            Subpage 1
+                        </a>
+                    </li>
+                    <li class="sidebar__dropdown--item">
+                        <a href="#" class="sidebar__dropdown--link">
+                            Subpage 2
+                        </a>
+                    </li>
+                    <li class="sidebar__dropdown--item">
+                        <a href="#" class="sidebar__dropdown--link">
+                            Subpage 3
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropdownItems = document.querySelectorAll('.sidebar__list--item.has-dropdown');
+
+        dropdownItems.forEach(item => {
+            const button = item.querySelector('.sidebar__button');
+            const dropdown = item.querySelector('.sidebar__dropdown');
+
+            if (button) {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Toggle current item
+                    item.classList.toggle('open');
+
+                    // Close other dropdowns
+                    dropdownItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('open');
+                        }
+                    });
+                });
+            }
+        });
+    });
+</script> -->

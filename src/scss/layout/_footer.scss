@@ -1,0 +1,107 @@
+@use "../config/mixins" as *;
+
+.footer {
+  background: linear-gradient(180deg, #be123c 0%, #881337 100%);
+//   padding: 40px 0;
+
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 40px;
+
+    &-logo {
+      img {
+        width: 250px;
+        margin-bottom: 18px;
+      }
+      p {
+        @include font(var(--white), 20px, 400);
+        opacity: 0.8;
+      }
+    }
+    &-link {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      &-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        p {
+          @include font(var(--white), 16px, 400);
+          opacity: 0.8;
+        }
+        a {
+          @include font(var(--white), 18px, 400);
+        }
+      }
+    }
+    &-item {
+      display: flex;
+      flex-direction: column;
+      p {
+        @include font(var(--white), 16px, 400);
+        opacity: 0.8;
+      }
+      a {
+        @include font(var(--white), 18px, 400);
+        margin-bottom: 20px;
+      }
+      &-icon {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        a {
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: 12px;
+          i {
+            padding: 10px;
+            font-size: 24px;
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 40px;
+    padding: 21px 0px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    p {
+      @include font(var(--white), 18px, 400);
+    }
+
+    &-item {
+      opacity: 0.6;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      @include devices(md) {
+        width: 100%;
+        font-size: 15px;
+      }
+    }
+
+    a {
+      @include font(var(--white), 18px, 400);
+      text-decoration: none;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+      white-space: nowrap;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

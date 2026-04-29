@@ -1,0 +1,69 @@
+@use "sass:map";
+
+@for $i from 1 through 5 {
+    .line-clamp-#{$i} {
+        display: -webkit-box;
+        -webkit-line-clamp: $i;
+        line-clamp: $i;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+
+@mixin line-fix($lines, $lh: 1.3em) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    line-height: $lh !important;
+    min-height: $lines * $lh;
+}
+
+@for $i from 1 through 5 {
+    .line-fix-#{$i} {
+        @include line-fix($i);
+    }
+}
+
+@mixin font($color: var(--black), $size: var(--size-text-18), $weight: 500, $style: normal, $line-height: 1.3) {
+    color: $color;
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+    line-height: $line-height;
+}
+
+$device-breakpoints: (
+    xxl: 1712px,
+    xl: 1400px,
+    lg: 1199px,
+    md: 991px,
+    sm: 768px,
+    xs: 574px,
+    xxs: 350px
+);
+
+@mixin devices($breakpoint, $type: "max") {
+    $resolved-breakpoint: $breakpoint;
+
+    @if map.has-key($device-breakpoints, $breakpoint) {
+        $resolved-breakpoint: map.get($device-breakpoints, $breakpoint);
+    }
+
+    @if $type =="max" {
+        @media (max-width: $resolved-breakpoint) {
+            @content;
+        }
+    }
+
+    @else if $type =="min" {
+        @media (min-width: $resolved-breakpoint) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("Manrope.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "stixti";
+  src: url("stixtitalic.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "stixtv";
+  src: url("stixtvariable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}

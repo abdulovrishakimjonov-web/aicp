@@ -1,0 +1,122 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-top-logo">
+                <img src="../../images/logo.svg" alt="">
+                <p>Xalqaro standartlarga asoslangan fashion <br> va dizayn ta’limi markazi.</p>
+            </div>
+            <div class="footer-top-link">
+                <div class="footer-top-link-text">
+                    <p>Telefon raqam:</p>
+                    <a href="">+998 93 588 58 88</a>
+                </div>
+                <div class="footer-top-link-text">
+                    <p>Elektron pochta:</p>
+                    <a href="">info@aicp.uz</a>
+                </div>
+            </div>
+            <div class="footer-top-item">
+                <p>Manzil:</p>
+                <a href="#">Uzbekistan , Tashkent ,Bunyodakor 25-uy </a>
+                <div class="footer-top-item-icon">
+                    <a href="#"><i class="i-inistagram"></i></a>
+                    <a href="#"><i class="i-facebook"></i></a>
+                    <a href="#"><i class="i-yutube"></i></a>
+                    <!-- <a href="#"><i class="i-teligram"></i></a> -->
+                    <a href="#"><i class="i-linkdin"></i></a>
+                </div>
+            </div>
+            <iframe src="https://www.google.com/maps?q=Tashkent&output=embed" width="284" height="136"
+                style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="footer__bottom">
+            <p class="footer__bottom-item">© <span id="y"></span> 2026 Akademiya. Barcha huquqlar himoyalangan.</p>
+            <script>y.textContent = new Date().getFullYear()</script>
+            <a href="https://proend.ru" target="_blank" class="footer__bottom-item ">
+                Ishlab chiqaruvchi
+                <img src="@/images/proend.svg" width="100" alt="">
+            </a>
+        </div>
+    </div>
+</footer>
+<script src="@/assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="@/assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="@/assets/libs/owl-carousel/owl.carousel.min.js"></script>
+<script src="@/assets/js/lenis.js"></script>
+<script src="@/assets/js/imask.js"></script>
+<script src="@/assets/js/main.js"></script>
+
+<script>
+
+    $(function () {
+        $('.students__carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 2222,
+            autoplayHoverPause: true,
+            nav: false,
+            dots: false,
+            center: true,
+            margin: 16,
+            smartSpeed: 300,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                },
+                1200: {
+                    items: 4
+                },
+                1600: {
+                    items: 5
+                },
+                2000: {
+                    items: 6
+                }
+
+            }
+        });
+    });
+    $(function () {
+        $('.service-page__achievements--carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 2222,
+            autoplayHoverPause: true,
+            nav: false,
+            dots: true,
+            center: true,
+            margin: 16,
+            smartSpeed: 300,
+            responsive: {
+                0: {
+                    items: 1.5
+                },
+                600: {
+                    items: 2.5
+                },
+                1200: {
+                    items: 3.5
+                },
+                1800: {
+                    items: 4.5
+                },
+                2400: {
+                    items: 5.5
+                },
+                3000: {
+                    items: 6.5
+                },
+
+
+            }
+        });
+    });
+</script>

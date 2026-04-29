@@ -1,0 +1,284 @@
+@use "../config/mixins" as *;
+
+.apply {
+  &-page {
+    &-top {
+      h2 {
+        @include font(rgba(15, 23, 42, 1), 36px, 600);
+        text-align: center;
+        margin-bottom: 24px;
+        span {
+          color: var(--rose600);
+        }
+      }
+    }
+
+    &-text {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      margin-bottom: 80px;
+    }
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+      padding-left: 20px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background: var(--pink500);
+      }
+
+      &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 243px;
+        h2 {
+          @include font(50px, 600);
+          background: linear-gradient(
+            180deg,
+            #db2777 0%,
+            rgba(219, 39, 119, 0) 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent;
+        }
+      }
+    }
+
+    &-content {
+      p {
+        @include font(rgba(71, 85, 105, 1), 16px, 400);
+        margin-bottom: 4px;
+      }
+
+      h4 {
+        @include font(rgba(0, 0, 0, 1), 20px, 600);
+        line-height: 1.4;
+      }
+    }
+
+   &-main {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+
+  & > div {
+    flex: 1;
+  }
+
+  &-wrapper {
+
+    h3 {
+        @include font(rgba(15, 23, 42, 1), 36px, 600);
+        margin-bottom: 24px;
+        span {
+            color: var(--rose600);
+        }
+    }
+
+    &-cards {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+
+      &-card:nth-child(1) {
+        background-color: var(--rose100);
+      }
+      &-card:nth-child(2) {
+        background-color: var(--pink100);
+      }
+
+
+      &-card {
+        flex: 1;
+        border-radius: 12px;
+        padding: 20px;
+        
+
+        background-image:
+          url("../../images/apply-img-5.png"),
+          url("../../images/apply-img-6.png");
+
+        background-position:
+          top right,
+          bottom right;
+
+        background-repeat: no-repeat;
+
+        h4 {
+          margin: 20px 0;
+        }
+
+        &-icon {
+            i {
+                font-size: 32px;
+                color: var(--rose600);
+            }
+        }
+
+        &-line {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          p {
+            @include font(rgba(51, 65, 85, 1), 20px, 400);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            i {
+                font-size: 20px;
+                color: var(--rose600);
+            }
+          }
+
+          
+        }
+      }
+    }
+
+    &-link {
+      display: flex;
+      gap: 10px;
+      padding-left: 20px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background: var(--rose600);
+      }
+
+      &-info {
+        i {
+            font-size: 24px;
+            color: var(--rose600);
+        }
+      }
+      &-text {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        b {
+            @include font(rgba(15, 23, 42, 1), 20px, 400);
+        }
+        p {
+            @include font(rgba(51, 65, 85, 1), 18px, 400);
+        }
+      }
+    }
+  }
+
+  &-conect {
+
+    h3 {
+        @include font(rgba(15, 23, 42, 1), 36px, 600);
+        margin-bottom: 24px;
+        span {
+            color: var(--rose600);
+        }
+    }
+
+    &-head {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 34px;
+    }
+
+    &-item {
+      display: flex;
+      gap: 10px;
+      padding-left: 10px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background: var(--rose600);
+      }
+
+      i {
+        font-size: 32px;
+        color: var(--rose600);
+      }
+      &-text {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        b {
+            @include font(rgba(15, 23, 42, 1), 20px, 500);
+        }
+        p {
+            @include font(rgba(51, 65, 85, 1), 16px, 400);
+        }
+      }
+    }
+
+    &-card {
+      position: relative;
+      padding: 24px;
+      overflow: hidden;
+
+      background: url("../../images/apply-img-7.jpg") center/cover no-repeat;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(143, 32, 82, 0.9) 0%,
+          rgba(120, 23, 67, 0.6) 100%
+        );
+        z-index: 1;
+      }
+
+      .card-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+        // max-width: 400px;
+      }
+
+      h3 {
+        @include font(var(--white), 36px, 600);
+        margin-bottom: 6px;
+      }
+
+      p {
+        @include font(var(--white), 18px, 400);
+        margin-bottom: 18px;
+      }
+
+      button {
+        background: white;
+        @include font(var(--rose600), 18px, 500);
+        padding: 12px 24px;
+        border-radius: 12px;
+        border: none;
+      }
+    }
+  }
+}
+  }
+}

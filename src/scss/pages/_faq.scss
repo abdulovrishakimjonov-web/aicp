@@ -1,0 +1,81 @@
+@use "../config/mixins" as *;
+
+.faq {
+  &-section {
+    margin-bottom: 100px;
+
+    &-items {
+      width: 100%;
+    }
+
+    h2 {
+        @include font(rgba(15, 23, 42, 1), 36px, 600);
+        text-align: center;
+        margin-bottom: 32px;
+        span {
+            color: var(--rose600);
+        }
+    }
+
+    &-main {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      background-color: var(--white);
+      border: none;
+      border-bottom: 1px solid rgba(226, 232, 240, 1);
+      width: 100%;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      &:not(:last-child) {
+      }
+
+      &-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        @include font(rgba(30, 41, 59, 1), 20px, 500);
+        i {
+          transition: 0.4s;
+          font-size: 20px;
+          background-color: var(--rose600);
+          border-radius: 50%;
+          padding: 1px;
+          color: var(--white);
+        }
+      }
+
+      &-answer {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        font-size: 16px;
+        margin-top: 0;
+      }
+
+      &.active {
+        .faq-section-item-question {
+          margin-bottom: 12px;
+
+          i {
+            transform: rotate(180deg);
+          }
+        }
+
+        .faq-section-item-answer {
+          max-height: 200px;
+          opacity: 1;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+@use "../config/mixins" as *;
+
+.news {
+  &-section {
+    background: var(--rose50);
+    padding: 50px 0;
+    margin-bottom: 80px;
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+
+      h2 {
+        @include font(var(--slate900), 36px, 600);
+
+        span {
+          color: var(--rose600);
+        }
+      }
+
+      .news-section-all {
+        color: var(--rose600);
+        font-weight: 500;
+        text-decoration: none;
+      }
+    }
+
+    &-main {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    &-card {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      padding-bottom: 12px;
+      transition: 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      img {
+        width: 291px;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      h4 {
+        @include font(var(--slate900), 20px, 500);
+        margin: 16px 15px 8px 15px;
+      }
+
+      p {
+        @include font(var(--slate500), 16px, 400);
+        margin: 0px 15px 16px 15px;
+      }
+    }
+
+    &-meta {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0px 15px 0px 15px;
+
+      a {
+        @include font(var(--slate500), 17px, 400);
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        text-decoration: none;
+        i {
+          font-size: 20px;
+          color: var(--rose600);
+        }
+      }
+
+      span {
+        color: rgba(174, 184, 201, 1);
+      }
+    }
+  }
+}

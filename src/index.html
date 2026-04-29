@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    @@include('components/layout/head.html')
+</head>
+
+<body class="index">
+    @@include('components/layout/header.html')
+    @@include('components/layout/menu.html')
+
+    @@include('components/sections/hero.html')
+    @@include('components/sections/education.html')
+    @@include('components/sections/about.html')
+    @@include('components/sections/news.html')
+    @@include('components/sections/why-us.html')
+    @@include('components/sections/faq.html')
+
+    @@include('components/layout/footer.html')
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.header')
+            if (!header) return
+
+            const threshold = 30
+            let ticking = false
+
+            const update = () => {
+                header.classList.toggle('index', window.scrollY <= threshold)
+            }
+
+            update()
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        update()
+                        ticking = false
+                    })
+                    ticking = true
+                }
+            }, { passive: true })
+        })
+    </script>
+
+</body>
+
+</html>

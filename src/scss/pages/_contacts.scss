@@ -1,0 +1,167 @@
+@use "../config/mixins" as *;
+
+.contacts {
+  .contacts-text {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 80px;
+  }
+  .contacts-item {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: var(--rose600);
+    }
+  }
+
+  .contacts-content {
+    p {
+      @include font(rgba(71, 85, 105, 1), 16px, 400);
+      margin-bottom: 4px;
+    }
+
+    h4 {
+      @include font(rgba(0, 0, 0, 1), 20px, 600);
+      line-height: 1.4;
+    }
+  }
+
+  &-wrapper {
+    flex: 1;
+    h3 {
+      @include font(rgba(8, 30, 58, 1), 24px, 600);
+      margin-bottom: 16px;
+    }
+    &-line {
+      width: 100%;
+      height: 0.5px;
+      background-color: rgba(226, 232, 242, 1);
+    }
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      &-input {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+
+        label {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          width: 100%;
+
+          span {
+            @include font(rgba(51, 65, 85, 1), 16px, 500);
+          }
+
+          input {
+            width: 100%;
+            padding: 10px 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(226, 232, 240, 1);
+            background-color: rgba(248, 250, 252, 1);
+            outline: none;
+
+            &:focus {
+              border-color: var(--rose600);
+            }
+          }
+        }
+      }
+
+      &-text {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        label {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          width: 100%;
+
+          span {
+            @include font(rgba(51, 65, 85, 1), 16px, 500);
+          }
+
+          input {
+            width: 100%;
+            min-height: 120px;
+            padding: 10px 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(226, 232, 240, 1);
+            background-color: rgba(248, 250, 252, 1);
+            resize: none;
+            outline: none;
+
+            &:focus {
+              border-color: var(--rose600);
+            }
+          }
+        }
+
+        button {
+          padding: 10px 24px;
+          border-radius: 12px;
+          background-color: var(--rose600);
+          width: fit-content;
+          cursor: pointer;
+          @include font(var(--white), 16px, 500);
+          border: none;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: translateY(-2px); 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+          }
+          &:active {
+            transform: scale(0.97); 
+          }
+        }
+      }
+    }
+  }
+
+  &-locatic {
+    flex-shrink: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      a {
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid rgba(226, 232, 240, 1);
+        background: rgba(241, 245, 249, 1);
+        i {
+          font-size: 20px;
+          color: var(--rose600);
+        }
+      }
+    }
+  }
+
+  &-main {
+    display: flex;
+    gap: 16px;
+  }
+}

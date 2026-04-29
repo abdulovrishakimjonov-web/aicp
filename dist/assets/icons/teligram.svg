@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="teligram.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="35.625"
+     inkscape:cx="12"
+     inkscape:cy="12"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     d="M 11.916789,22 C 6.3939195,22 1.9167695,17.5228 1.9167695,12 c 0,-5.52285 4.47715,-10 10.0000195,-10 5.5228,0 10,4.47715 10,10 0,5.5228 -4.4772,10 -10,10 z m -3.1098695,-8.8292 0.01265,-0.008 c 0.57973,1.9139 0.86959,2.8709 0.86959,2.8709 0.11227,0.3105 0.26663,0.3659 0.4539295,0.3406 0.1872,-0.0254 0.2866,-0.1267 0.4088,-0.2446 0,0 0.3963,-0.3825 1.1889,-1.1474 l 2.5509,1.8875 c 0.4648,0.2568 0.8004,0.1243 0.9158,-0.4321 l 1.6578,-7.82129 c 0.183,-0.72799 -0.138,-1.01997 -0.7025,-0.78887 L 6.4297595,11.5871 c -0.66401,0.2669 -0.6608,0.6384 -0.12089,0.804 z"
+     fill="#ffffff"
+     id="path1" />
+</svg>

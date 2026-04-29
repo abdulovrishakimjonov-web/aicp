@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Vatandoshlar Jamoat Fondi rasmiy veb-sayti">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="./images/favicon.svg" type="image/svg">
+<link rel="stylesheet" href="./assets/libs/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="./assets/libs/aos/main.min.css">
+<link rel="stylesheet" href="./assets/flatpickr/flatpickr.css">
+<link rel="stylesheet" href="./assets/libs/owl-carousel/owl.carousel.min.css">
+<link rel="stylesheet" href="./assets/libs/owl-carousel/owl.theme.default.min.css">
+<link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+<link rel="stylesheet" href="./assets/icomoon/style.css">
+<link rel="stylesheet" href="./css/main.min.css">
+<script src="./assets/libs/aos/main.min.js"></script>
+<script src="./assets/libs/jquery.min.js"></script>
+<title> Project </title>
+</head>
+
+<body>
+    <header class="header index">
+    <div class="header-main">
+        <div class="container">
+            <div class="header-main-top">
+
+                <div class="header-main-top-link">
+                    <a href="#"><i class="i-phone"></i> +998 (71) 276 80 86</a>
+                    <a href="#"><i class="i-mail"></i> info@aicp.uz</a>
+                </div>
+
+                <div class="header-main-top-icon">
+                    <a href="#"><i class="i-facebook"></i></a>
+                    <a href="#"><i class="i-yutube"></i></a>
+                    <a href="#"><i class="i-inistagram"></i></a>
+                    <a href="#"><i class="i-linkdin"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="header-line"></div> -->
+
+    <div class="header-bottom">
+        <div class="container">
+
+            <div class="header-bottom-low">
+
+                <div class="header-bottom-low-logo">
+                    <a href="./index.html"><img src="./images/logo.svg" alt=""></a>
+                </div>
+
+                <div class="header-bottom-low-item">
+                    <a href="./about.html">Biz haqimizda</a>
+                    <a href="./leadership.html">Rahbariyat</a>
+                    <a href="../../education.html">Ta’lim</a>
+                    <a href="./applcation.html">Qabul</a>
+                    <a href="#">Yangiliklar</a>
+                    <a href="./contacts.html">Bog’lanish</a>
+                </div>
+
+                <div class="header-bottom-low-btn">
+                    <div class="lang">
+                        <button class="lang__btn">
+                            Uzb <i class="i-dropdown"></i>
+                        </button>
+
+                        <div class="lang__menu">
+                            <div class="lang__item">Uzb</div>
+                            <div class="lang__item">Rus</div>
+                            <div class="lang__item">Eng</div>
+                        </div>
+                    </div>
+                    <button class="header-bottom-low-btn-hide">
+                        Qabul
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+    const dropdown = document.querySelector('.header-bottom-low-btn-lang-dropdown');
+    const dropdown = document.querySelector('.lang');
+    const btn = dropdown.querySelector('.lang__btn');
+    const items = dropdown.querySelectorAll('.lang__item');
+
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle('active');
+    });
+
+    document.addEventListener('click', () => {
+        dropdown.classList.remove('active');
+    });
+
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            btn.innerHTML = item.textContent + ' <i class="i-dropdown"></i>';
+            dropdown.classList.remove('active');
+        });
+    });
+</script>
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menyu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="menu">
+            <li class="menu-item menu-item--dropdown">
+                <span class="menu-link" data-bs-toggle="collapse" data-bs-target="#submenu1" aria-expanded="false" aria-controls="submenu1">
+                    O Bien
+                    <i class="i-dropdown"></i>
+                </span>
+                <ul class="submenu collapse" id="submenu1">
+                    <li class="submenu-item">
+                        <a href="about.html" class="submenu-link">
+                            О нас
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="results.html" class="submenu-link">
+                            Результаты
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="team.html" class="submenu-link">
+                            Эксперты Bien
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="news.html" class="submenu-link">
+                            Новости
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item menu-item--dropdown">
+                <span class="menu-link" data-bs-toggle="collapse" data-bs-target="#submenu2" aria-expanded="false" aria-controls="submenu2">
+                    Услуги
+                    <i class="i-dropdown"></i>
+                </span>
+                <ul class="submenu collapse" id="submenu2">
+                    <li class="submenu-item">
+                        <a href="service-1.html" class="submenu-link">
+                            Поступление в вузы США
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="service-2.html" class="submenu-link">
+                            Поступление на магистратуру и аспирантуру
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item menu-item--dropdown">
+                <span class="menu-link" data-bs-toggle="collapse" data-bs-target="#submenu3" aria-expanded="false" aria-controls="submenu3">
+                    Полезные материалы
+                    <i class="i-dropdown"></i>
+                </span>
+                <ul class="submenu collapse" id="submenu3">
+                    <li class="submenu-item">
+                        <a href="materials.html" class="submenu-link">
+                            Материалы
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="exam.html" class="submenu-link">
+                            Пробный SAT
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="events.html" class="menu-link">
+                    Вебинары и мероприятия
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+    <div class="breadcrumbs">
+  <div class="breadcrumbs-img">
+    <img src="./images/breadcrumb-img-1.png" alt="">
+    
+    <div class="breadcrumbs-img-overlay">
+      <a href="#">Biz haqimizda</a>
+    </div>
+    
+  </div>
+</div>
+    <div class="layout">
+        <div class="container">
+           <div class="application-page">
+    <div class="application-page-main">
+        <div class="application-page-main-wrapper">
+            <div class="application-page-main-wrapper-text">
+                <h2>Ariza <span>topshirish</span></h2>
+                <p>Quyidagi formani to'ldirib, akademiyaga qabul uchun ariza yuboring. Bizning
+                    curatorlarimiz siz bilan tez orada bog'lanishadi.</p>
+            </div>
+            <form action="#" class="application-page-main-wrapper-form">
+                <div class="application-page-main-wrapper-form-grid">
+                    <label for="ism">
+                        <span>Ism *</span>
+                        <input type="text" id="ism" placeholder="Ismingizni yozing">
+                    </label>
+                    <label for="familiya">
+                        <span>Familiya *</span>
+                        <input type="text" id="familiya" placeholder="Familiyangizni yozing">
+                    </label>
+                    <label for="tug_ilgan_sana">
+                        <span>Tug'ilgan sana *</span>
+                        <input type="date" id="tug_ilgan_sana" placeholder="kk/oy/yil">
+                    </label>
+                    <label for="elektron_pochta">
+                        <span>Elektron pochta *</span>
+                        <input type="email" id="elektron_pochta" placeholder="Elektron pochtangizni yozing">
+                    </label>
+                    <label for="telefon">
+                        <span>Telefon raqam *</span>
+                        <input type="tel" id="telefon" placeholder="Telefon raqamingizni yozing">
+                    </label>
+                    <label for="talim_darajasi">
+                        <span>Ta'lim darajasi *</span>
+                        <select id="talim_darajasi">
+                            <option value="" disabled selected>Bakalavr</option>
+                            <option value="bakalavr">Bakalavr</option>
+                            <option value="magistr">Magistr</option>
+                            <option value="orta">O'rta maxsus</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="application-page-main-wrapper-form-input">
+                    <div class="application-page-main-wrapper-form-input-side">
+                        <label for="diplom">
+                            <span>Diplom yoki shahodatnoma *</span>
+                            <div class="file-upload-box">
+                                <input type="file" id="diplom" accept="image/*,application/pdf" />
+                                <div class="file-upload-box-content">
+                                    <i class="i-upload"></i>
+                                    <p>Diplom yoki shahodatnoma nusxasini yuklang (tarjima tavsiya etiladi). Fayl hajmi: PDF, JPG yoki PNG formatida, hajmi 5 MB bo'lgan fayl yuklang</p>
+                                </div>
+                            </div>
+                        </label>
+                        <label for="portfolio">
+                            <span>Portfolio *</span>
+                            <div class="file-upload-box">
+                                <input type="file" id="portfolio" accept="image/*,application/pdf" />
+                                <div class="file-upload-box-content">
+                                    <i class="i-upload"></i>
+                                    <p>Agar mavjud bo'lsa, ishlaringiz namunalarini (portfolio) yuklang. Portfolio faylini PDF yoki JPG/PNG formatida yuklang, maksimal 10 MB</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <button type="submit">Yuborish</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="application-page-main-group">
+            <div class="application-page-main-group-field">
+                <h2>Ariza holatini <span>tekshirish</span></h2>
+                <p>Ariza raqamingiz yoki telefon raqamingizni kiriting va natijani ko‘ring.</p>
+            </div>
+            <div class="application-page-main-group-code">
+                <div class="application-page-main-group-code-row">
+                    <input type="tel" placeholder="Masalan: A1023 yoki +998901234567" class="contact-form__input" />
+                    <button class="contact-form__button">Tekshirish</button>
+                </div>
+                <div class="application-page-main-group-code-item">
+                    <i class="i-info"></i>
+                    <div class="application-page-main-group-code-item-text">
+                        <b>Ma'lumot</b>
+                        <p>Ariza raqamingiz yoki telefon raqamingizni kiriting va natijani ko'ring.</p>
+                        <p>Qo'shimcha ma'lumot uchun operatorlarimiz siz bilan bog'lanadi yoki qo'llab-quvvatlash markazi bilan bog'laning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+        </div>
+        <footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-top-logo">
+                <img src="../../images/logo.svg" alt="">
+                <p>Xalqaro standartlarga asoslangan fashion <br> va dizayn ta’limi markazi.</p>
+            </div>
+            <div class="footer-top-link">
+                <div class="footer-top-link-text">
+                    <p>Telefon raqam:</p>
+                    <a href="">+998 93 588 58 88</a>
+                </div>
+                <div class="footer-top-link-text">
+                    <p>Elektron pochta:</p>
+                    <a href="">info@aicp.uz</a>
+                </div>
+            </div>
+            <div class="footer-top-item">
+                <p>Manzil:</p>
+                <a href="#">Uzbekistan , Tashkent ,Bunyodakor 25-uy </a>
+                <div class="footer-top-item-icon">
+                    <a href="#"><i class="i-inistagram"></i></a>
+                    <a href="#"><i class="i-facebook"></i></a>
+                    <a href="#"><i class="i-yutube"></i></a>
+                    <!-- <a href="#"><i class="i-teligram"></i></a> -->
+                    <a href="#"><i class="i-linkdin"></i></a>
+                </div>
+            </div>
+            <iframe src="https://www.google.com/maps?q=Tashkent&output=embed" width="284" height="136"
+                style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="footer__bottom">
+            <p class="footer__bottom-item">© <span id="y"></span> 2026 Akademiya. Barcha huquqlar himoyalangan.</p>
+            <script>y.textContent = new Date().getFullYear()</script>
+            <a href="https://proend.ru" target="_blank" class="footer__bottom-item ">
+                Ishlab chiqaruvchi
+                <img src="./images/proend.svg" width="100" alt="">
+            </a>
+        </div>
+    </div>
+</footer>
+<script src="./assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="./assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="./assets/libs/owl-carousel/owl.carousel.min.js"></script>
+<script src="./assets/js/lenis.js"></script>
+<script src="./assets/js/imask.js"></script>
+<script src="./assets/js/main.js"></script>
+
+<script>
+
+    $(function () {
+        $('.students__carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 2222,
+            autoplayHoverPause: true,
+            nav: false,
+            dots: false,
+            center: true,
+            margin: 16,
+            smartSpeed: 300,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                },
+                1200: {
+                    items: 4
+                },
+                1600: {
+                    items: 5
+                },
+                2000: {
+                    items: 6
+                }
+
+            }
+        });
+    });
+    $(function () {
+        $('.service-page__achievements--carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 2222,
+            autoplayHoverPause: true,
+            nav: false,
+            dots: true,
+            center: true,
+            margin: 16,
+            smartSpeed: 300,
+            responsive: {
+                0: {
+                    items: 1.5
+                },
+                600: {
+                    items: 2.5
+                },
+                1200: {
+                    items: 3.5
+                },
+                1800: {
+                    items: 4.5
+                },
+                2400: {
+                    items: 5.5
+                },
+                3000: {
+                    items: 6.5
+                },
+
+
+            }
+        });
+    });
+</script>
+
+</body>
+
+</html>

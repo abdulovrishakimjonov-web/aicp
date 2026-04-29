@@ -1,0 +1,37 @@
+<div class="contacts">
+    <div class="container">
+        <form action="#" method="post" id="myForm" class="row">
+            <div class="col-md-4 form-group">
+                <label class="required" for="name">Name</label>
+                <input type="text" id="name" name="name" class="required form-control" required>
+            </div>
+            <div class="col-md-4 form-group">
+                <label class="required" for="phone">Phone</label>
+                <input type="tel" data-phone-mask id="phone" name="phone" class="required form-control" required>
+            </div>
+            <div class="col-md-4 form-group">
+                <label class="required" for="email">Email</label>
+                <input type="email" id="email" name="email" class="required form-control" required>
+            </div>
+            <div class="col-12 form-group">
+                <label class="required" for="message">Textarea</label>
+                <textarea id="message" name="message" class="required form-control" required></textarea>
+            </div>
+            <div class="col-12 form-group">
+                <label class="required" for="select">Select</label>
+                <div class="select-wrapper">
+
+                    <select name="select" id="select" required class="required form-control">
+                        <option value="1">option</option>
+                        <option value="1">option</option>
+                        <option value="1">option</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-12 form-group d-flex gap-2">
+                <button type="reset" class="button bg-secondary text-white">Reset</button>
+                <button type="submit" class="button bg-success text-white">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+<header class="header index">
+    <div class="header-main">
+        <div class="container">
+            <div class="header-main-top">
+
+                <div class="header-main-top-link">
+                    <a href="#"><i class="i-phone"></i> +998 (71) 276 80 86</a>
+                    <a href="#"><i class="i-mail"></i> info@aicp.uz</a>
+                </div>
+
+                <div class="header-main-top-icon">
+                    <a href="#"><i class="i-facebook"></i></a>
+                    <a href="#"><i class="i-yutube"></i></a>
+                    <a href="#"><i class="i-inistagram"></i></a>
+                    <a href="#"><i class="i-linkdin"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="header-line"></div> -->
+
+    <div class="header-bottom">
+        <div class="container">
+
+            <div class="header-bottom-low">
+
+                <div class="header-bottom-low-logo">
+                    <a href="@/index.html"><img src="@/images/logo.svg" alt=""></a>
+                </div>
+
+                <div class="header-bottom-low-item">
+                    <a href="@/about.html">Biz haqimizda</a>
+                    <a href="@/leadership.html">Rahbariyat</a>
+                    <a href="../../education.html">Ta’lim</a>
+                    <a href="@/applcation.html">Qabul</a>
+                    <a href="#">Yangiliklar</a>
+                    <a href="@/contacts.html">Bog’lanish</a>
+                </div>
+
+                <div class="header-bottom-low-btn">
+                    <div class="lang">
+                        <button class="lang__btn">
+                            Uzb <i class="i-dropdown"></i>
+                        </button>
+
+                        <div class="lang__menu">
+                            <div class="lang__item">Uzb</div>
+                            <div class="lang__item">Rus</div>
+                            <div class="lang__item">Eng</div>
+                        </div>
+                    </div>
+                    <button class="header-bottom-low-btn-hide">
+                        Qabul
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+    const dropdown = document.querySelector('.header-bottom-low-btn-lang-dropdown');
+    const dropdown = document.querySelector('.lang');
+    const btn = dropdown.querySelector('.lang__btn');
+    const items = dropdown.querySelectorAll('.lang__item');
+
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle('active');
+    });
+
+    document.addEventListener('click', () => {
+        dropdown.classList.remove('active');
+    });
+
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            btn.innerHTML = item.textContent + ' <i class="i-dropdown"></i>';
+            dropdown.classList.remove('active');
+        });
+    });
+</script>
