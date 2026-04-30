@@ -20,6 +20,7 @@
       justify-content: center;
 
       a {
+        font-family: "STIXVar";
         position: relative;
         top: 45px;
         @include font(var(--white), 48px, 600);

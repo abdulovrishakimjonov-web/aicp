@@ -24,7 +24,6 @@
             #fecdd3 100%
           );
 
-
         &:first-child {
           background:
             url("../../images/leadership-img-3.png") left bottom no-repeat,
@@ -37,7 +36,8 @@
 
           .leadership-page-main-cards-card {
             &-text {
-              p, h3 {
+              p,
+              h3 {
                 opacity: 1;
               }
             }
@@ -78,7 +78,7 @@
               }
 
               a {
-                color:rgba(15, 23, 42, 1);
+                color: rgba(15, 23, 42, 1);
               }
             }
 
@@ -116,6 +116,7 @@
             h3 {
               @include font(var(--white), 28px, 600);
               opacity: 0.9;
+              font-family: "STIXText";
             }
           }
 
@@ -170,6 +171,49 @@
             height: auto;
           }
         }
+      }
+    }
+  }
+
+  &-view {
+    margin-bottom: 100px;
+
+    &-wrapper {
+      display: flex;
+      align-items: stretch;
+      gap: 24px;
+    }
+
+    &-content {
+      flex: 1;
+      background: #f5f7fb;
+      border-radius: 16px;
+      padding: 24px 28px;
+
+      h3 {
+        font-family: "STIXVar";
+        margin-bottom: 16px;
+        @include font(#0f172a, 24px, 600);
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 10px;
+      }
+
+      p {
+        @include font(#475569, 18px, 400);
+        margin-bottom: 12px;
+      }
+    }
+
+    &-image {
+      width: 320px;
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        max-height: 420px;
+        object-fit: cover;
+        border-radius: 16px;
       }
     }
   }

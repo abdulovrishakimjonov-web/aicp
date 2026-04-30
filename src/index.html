@@ -18,29 +18,26 @@
 
     @@include('components/layout/footer.html')
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const header = document.querySelector('.header')
-            if (!header) return
+   document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.header');
+    if (!header) return;
 
-            const threshold = 30
-            let ticking = false
+    const threshold = 30;
 
-            const update = () => {
-                header.classList.toggle('index', window.scrollY <= threshold)
-            }
+    const updateHeader = () => {
+        if (window.scrollY > threshold) {
+            header.classList.remove('index'); // scroll bo‘lsa
+        } else {
+            header.classList.add('index'); // tepada
+        }
+    };
 
-            update()
+    // 🔥 page ochilganda ham ishlaydi
+    updateHeader();
 
-            window.addEventListener('scroll', () => {
-                if (!ticking) {
-                    requestAnimationFrame(() => {
-                        update()
-                        ticking = false
-                    })
-                    ticking = true
-                }
-            }, { passive: true })
-        })
+    // 🔥 scroll bo‘lganda ishlaydi
+    window.addEventListener('scroll', updateHeader, { passive: true });
+});
     </script>
 
 </body>

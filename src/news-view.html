@@ -11,7 +11,9 @@
     <div class="layout">
         <div class="container">
             <div class="news-view">
+                
                 <div class="content">
+                    <img src="./images/news-view-img.svg" alt="">
                     <div class="news-view__title">
                         30 идей для вашего проекта, который понравится приемной комиссии
                     </div>
@@ -102,10 +104,8 @@
                             initSlider();
                             initArticleSidebar();
 
-                            // Initialize fancybox for dynamically created elements
                             if (typeof Fancybox !== 'undefined') {
                                 Fancybox.bind('[data-fancybox="gallery"]', {
-                                    // Fancybox options if needed
                                 });
                             }
                         });
@@ -132,7 +132,6 @@
                             const lines = linesContainer.children;
                             lines[index].classList.add('active');
 
-                            // Prevent click on slides if dragged
                             Array.from(slides).forEach(slide => {
                                 slide.addEventListener('click', (e) => {
                                     if (isDragged) {

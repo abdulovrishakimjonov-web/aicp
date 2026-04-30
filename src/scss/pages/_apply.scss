@@ -2,8 +2,10 @@
 
 .apply {
   &-page {
+    margin-bottom: 100px;
     &-top {
       h2 {
+        font-family: "STIXVar";
         @include font(rgba(15, 23, 42, 1), 36px, 600);
         text-align: center;
         margin-bottom: 24px;
@@ -25,14 +27,14 @@
       flex-direction: column;
       gap: 16px;
       position: relative;
-      padding-left: 20px;
+      padding: 20px;
 
       &::before {
         content: "";
         position: absolute;
         left: 0;
         top: 0;
-        width: 2px;
+        width: 3px;
         height: 100%;
         background: var(--pink500);
       }
@@ -43,6 +45,7 @@
         justify-content: space-between;
         gap: 243px;
         h2 {
+            font-family: "STIXVar";
           @include font(50px, 600);
           background: linear-gradient(
             180deg,
@@ -64,6 +67,7 @@
       }
 
       h4 {
+        font-family: "STIXVar";
         @include font(rgba(0, 0, 0, 1), 20px, 600);
         line-height: 1.4;
       }
@@ -81,6 +85,7 @@
   &-wrapper {
 
     h3 {
+        font-family: "STIXVar";
         @include font(rgba(15, 23, 42, 1), 36px, 600);
         margin-bottom: 24px;
         span {
@@ -118,6 +123,8 @@
         background-repeat: no-repeat;
 
         h4 {
+            font-family: "STIXVar";
+            @include font(rgba(15, 23, 42, 1), 24px, 600);
           margin: 20px 0;
         }
 
@@ -175,6 +182,7 @@
         flex-direction: column;
         gap: 6px;
         b {
+            font-family: "STIXVar";
             @include font(rgba(15, 23, 42, 1), 20px, 400);
         }
         p {
@@ -187,6 +195,7 @@
   &-conect {
 
     h3 {
+        font-family: "STIXVar";
         @include font(rgba(15, 23, 42, 1), 36px, 600);
         margin-bottom: 24px;
         span {
@@ -226,6 +235,7 @@
         flex-direction: column;
         gap: 4px;
         b {
+            font-family: "STIXVar";
             @include font(rgba(15, 23, 42, 1), 20px, 500);
         }
         p {
@@ -257,10 +267,10 @@
         position: relative;
         z-index: 2;
         color: white;
-        // max-width: 400px;
       }
 
       h3 {
+        font-family: "STIXVar";
         @include font(var(--white), 36px, 600);
         margin-bottom: 6px;
       }

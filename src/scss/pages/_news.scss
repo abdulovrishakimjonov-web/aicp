@@ -14,7 +14,7 @@
 
       h2 {
         @include font(var(--slate900), 36px, 600);
-
+        font-family: "STIXVar";
         span {
           color: var(--rose600);
         }
@@ -54,6 +54,7 @@
       h4 {
         @include font(var(--slate900), 20px, 500);
         margin: 16px 15px 8px 15px;
+        font-family: "STIXVar";
       }
 
       p {
@@ -83,6 +84,88 @@
       span {
         color: rgba(174, 184, 201, 1);
       }
+    }
+  }
+
+  &-page {
+    margin-bottom: 100px;
+    &-main {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    &-card {
+      //   position: relative;
+      background: #fff;
+      border-radius: 14px;
+      //   overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      padding-bottom: 12px;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      h4 {
+        @include font(var(--slate900), 20px, 500);
+        margin: 16px 15px 8px;
+      }
+
+      p {
+        @include font(var(--slate500), 16px, 400);
+        margin: 0 15px 16px;
+      }
+
+      .card-link {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+      }
+    }
+
+    &-meta {
+      position: relative;
+      z-index: 3;
+
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 15px;
+
+      a {
+        @include font(var(--slate500), 17px, 400);
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        text-decoration: none;
+        position: relative;
+        z-index: 4;
+
+        i {
+          font-size: 20px;
+          color: var(--rose600);
+        }
+      }
+
+      span {
+        color: rgba(174, 184, 201, 1);
+      }
+    }
+  }
+
+  &-view {
+    &-content {
+        background-color: var(--rose50);
+        padding: 20px;
+        border-radius: 12px;
     }
   }
 }

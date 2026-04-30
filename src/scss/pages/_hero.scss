@@ -8,7 +8,6 @@
 
   .container {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -30,40 +29,34 @@
       content: "";
       position: absolute;
       inset: 0;
-      z-index: -2;
-      background: var(--black);
-      opacity: 0.2;
+      background: #000;
+      opacity: 0.35;
     }
 
-    &--video,
-    &--image {
+    &--image,
+    &--video {
       position: absolute;
       inset: 0;
-      z-index: -3;
-      object-fit: cover;
-      height: 100%;
-      width: 100%;
-      object-position: center;
+      z-index: -2;
 
       img,
       video {
-        object-fit: cover;
-        height: 100%;
         width: 100%;
-        object-position: center;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }
 
   &-content {
-    position: absolute;
+    position: relative;
     text-align: center;
-    color: var(--white);
+    color: #fff;
 
     h2 {
       @include font(var(--white), 72px, 500);
       span {
-        font-style: italic;
+        font-family: "STIXText";
       }
     }
 
@@ -76,7 +69,9 @@
       button {
         padding: 12px 22px;
         border-radius: 10px;
-        @include font(var(--white), 18px, 500);
+        font-family: "Manrope", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
         cursor: pointer;
         border: none;
         transition: all 0.3s ease;
@@ -84,29 +79,31 @@
 
       .primary {
         background: var(--rose600);
-        color: var(--white);
+        color: #fff;
 
         &:hover {
-          transform: translateY(-2px); 
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+          transform: translateY(-2px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
+
         &:active {
-          transform: scale(0.97); 
+          transform: scale(0.97);
         }
       }
 
       .secondary {
         background: transparent;
-        color: var(--white);
+        color: #fff;
         backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.5);
 
         &:hover {
-          transform: translateY(-2px); 
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+          transform: translateY(-2px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
+
         &:active {
-          transform: scale(0.97); 
+          transform: scale(0.97);
         }
       }
     }

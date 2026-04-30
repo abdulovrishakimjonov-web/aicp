@@ -8,6 +8,7 @@
       @include font(rgba(15, 23, 42, 1), 36px, 600);
       text-align: center;
       margin-bottom: 32px;
+      font-family: "STIXVar";
 
       span {
         color: var(--rose600);
@@ -17,7 +18,7 @@
     &-main {
       display: flex;
       gap: 16px;
-      align-items: center;
+      align-items: start;
     }
 
     &-items {

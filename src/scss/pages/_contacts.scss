@@ -1,7 +1,7 @@
 @use "../config/mixins" as *;
 
 .contacts {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
   .contacts-text {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -34,6 +34,7 @@
     }
 
     h4 {
+      font-family: "STIXVar";
       @include font(rgba(0, 0, 0, 1), 20px, 600);
       line-height: 1.4;
     }
@@ -42,6 +43,7 @@
   &-wrapper {
     flex: 1;
     h3 {
+      font-family: "STIXVar";
       @include font(rgba(8, 30, 58, 1), 24px, 600);
       margin-bottom: 16px;
     }
@@ -130,11 +132,11 @@
           transition: all 0.3s ease;
 
           &:hover {
-            transform: translateY(-2px); 
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
           }
           &:active {
-            transform: scale(0.97); 
+            transform: scale(0.97);
           }
         }
       }
