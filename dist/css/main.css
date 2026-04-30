@@ -959,19 +959,19 @@
 .hero__overlay {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 1;
 }
 .hero__overlay::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: #000;
-  opacity: 0.35;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.2);
 }
 .hero__overlay--image, .hero__overlay--video {
   position: absolute;
   inset: 0;
-  z-index: -2;
+  z-index: 0;
 }
 .hero__overlay--image img,
 .hero__overlay--image video, .hero__overlay--video img,
