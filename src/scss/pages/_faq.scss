@@ -4,14 +4,27 @@
   &-section {
     margin-bottom: 100px;
 
+    @include devices("sm") {
+      margin-bottom: 60px;
+    }
+
     h2 {
       @include font(rgba(15, 23, 42, 1), 36px, 600);
       text-align: center;
       margin-bottom: 32px;
       font-family: "STIXVar";
+      
 
       span {
         color: var(--rose600);
+      }
+
+      @include devices("md") {
+        font-size: 28px;
+      }
+
+      @include devices("sm") {
+        font-size: 22px;
       }
     }
 
@@ -19,6 +32,10 @@
       display: flex;
       gap: 16px;
       align-items: start;
+
+      @include devices("md") {
+        flex-direction: column;
+      }
     }
 
     &-items {
@@ -34,11 +51,23 @@
       cursor: pointer;
       transition: 0.3s;
 
+      @include devices("sm") {
+        padding: 12px;
+      }
+
       &-question {
         display: flex;
         justify-content: space-between;
         align-items: center;
         @include font(rgba(30, 41, 59, 1), 20px, 500);
+
+        @include devices("md") {
+          font-size: 18px;
+        }
+
+        @include devices("sm") {
+          font-size: 16px;
+        }
 
         i {
           transition: 0.4s;
@@ -47,6 +76,10 @@
           border-radius: 50%;
           padding: 2px;
           color: #fff;
+
+          @include devices("sm") {
+            font-size: 16px;
+          }
         }
       }
 
@@ -59,7 +92,12 @@
           max-height 0.4s ease,
           opacity 0.3s ease,
           margin 0.3s ease;
+
         font-size: 16px;
+
+        @include devices("sm") {
+          font-size: 14px;
+        }
       }
 
       &.active {

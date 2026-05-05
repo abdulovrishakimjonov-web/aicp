@@ -18,45 +18,72 @@
     gap: 40px;
     position: relative;
     z-index: 1;
-  }
 
-&__overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1; 
+    @media (max-width: 768px) {
+      gap: 30px;
+      padding-top: calc(var(--height-header) + 20px);
+    }
 
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.2)  ; 
-  }
-
-  &--image,
-  &--video {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-
-    img,
-    video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    @media (max-width: 480px) {
+      gap: 24px;
+      padding-bottom: 20px;
     }
   }
-}
+
+  &-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    &--image,
+    &--video {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+
+      img,
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
 
   &-content {
     position: relative;
     text-align: center;
     color: #fff;
+    max-width: 1000px;
 
     h2 {
       @include font(var(--white), 72px, 500);
+      line-height: 1.2;
+
       span {
         font-family: "STIXText";
+      }
+
+      @media (max-width: 1024px) {
+        font-size: 48px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 36px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 28px;
+        line-height: 1.3;
       }
     }
 
@@ -65,6 +92,15 @@
       display: flex;
       justify-content: center;
       gap: 16px;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @media (max-width: 480px) {
+        gap: 12px;
+      }
 
       button {
         padding: 12px 22px;
@@ -75,6 +111,16 @@
         cursor: pointer;
         border: none;
         transition: all 0.3s ease;
+
+        @media (max-width: 768px) {
+          width: 100%;
+          max-width: 260px;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 16px;
+          padding: 10px 18px;
+        }
       }
 
       .primary {

@@ -64,11 +64,37 @@
         display: flex;
         gap: 50px;
 
+        @include devices("md") {
+          gap: 20px;
+        }
+
         a {
           @include font(var(--white), 16px, 500);
           display: flex;
+          align-items: center;
           gap: 6px;
           opacity: 0.9;
+        }
+
+        span {
+          @include devices("md") {
+            display: none;
+          }
+        }
+        i {
+          font-size: 24px;
+        }
+        &-button {
+          display: none;
+          @include devices("md") {
+            display: block;
+           border: none;
+           background: none; 
+           i {
+            font-size: 24px;
+            color: var(--white);
+           }
+          }
         }
       }
 
@@ -100,10 +126,19 @@
       justify-content: space-between;
       align-items: center;
 
+      &-logo {
+        @include devices("sm") {
+          width: 200px;
+        }
+      }
+
       &-item {
         display: flex;
         gap: 50px;
 
+        @include devices("lg") {
+          display: none;
+        }
         a {
           @include font(var(--white), 18px, 500);
           opacity: 0.8;
@@ -184,6 +219,10 @@
           border: none;
 
           transition: all 0.3s ease;
+
+          @include devices("sm") {
+            display: none;
+          }
 
           &:hover {
             transform: translateY(-2px);

@@ -6,17 +6,37 @@
     padding: 50px 0;
     margin-bottom: 80px;
 
+    @include devices("sm") {
+      padding: 30px 0;
+      margin-bottom: 50px;
+    }
+
     &-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 24px;
 
+      @include devices("sm") {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+      }
+
       h2 {
         @include font(var(--slate900), 36px, 600);
         font-family: "STIXVar";
+
         span {
           color: var(--rose600);
+        }
+
+        @include devices("md") {
+          font-size: 28px;
+        }
+
+        @include devices("sm") {
+          font-size: 22px;
         }
       }
 
@@ -24,6 +44,10 @@
         color: var(--rose600);
         font-weight: 500;
         text-decoration: none;
+
+        @include devices("sm") {
+          font-size: 14px;
+        }
       }
     }
 
@@ -31,6 +55,22 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 16px;
+
+      @include devices("lg") {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @include devices("md") {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include devices("sm") {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include devices("xs") {
+        grid-template-columns: 1fr;
+      }
     }
 
     &-card {
@@ -46,20 +86,40 @@
       }
 
       img {
-        width: 291px;
+        width: 100%; // ❗ fixed width olib tashlandi
         height: 200px;
         object-fit: cover;
+
+        @include devices("sm") {
+          height: 180px;
+        }
+
+        @include devices("xs") {
+          height: 160px;
+        }
       }
 
       h4 {
         @include font(var(--slate900), 20px, 500);
         margin: 16px 15px 8px 15px;
         font-family: "STIXVar";
+
+        @include devices("sm") {
+          font-size: 16px;
+        }
+
+        @include devices("xs") {
+          font-size: 14px; // ❗ min limit
+        }
       }
 
       p {
         @include font(var(--slate500), 16px, 400);
         margin: 0px 15px 16px 15px;
+
+        @include devices("xs") {
+          font-size: 14px;
+        }
       }
     }
 
@@ -67,7 +127,7 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      padding: 0px 15px 0px 15px;
+      padding: 0px 15px;
 
       a {
         @include font(var(--slate500), 17px, 400);
@@ -75,9 +135,18 @@
         align-items: center;
         gap: 4px;
         text-decoration: none;
+
+        @include devices("sm") {
+          font-size: 14px;
+        }
+
         i {
           font-size: 20px;
           color: var(--rose600);
+
+          @include devices("sm") {
+            font-size: 16px;
+          }
         }
       }
 
@@ -93,13 +162,24 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 16px;
+
+      @include devices("lg") {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      @include devices("md") {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include devices("sm") {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include devices("xs") {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
 
     &-card {
-      //   position: relative;
       background: #fff;
       border-radius: 14px;
-      //   overflow: hidden;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       padding-bottom: 12px;
       transition: 0.3s;
@@ -163,9 +243,9 @@
 
   &-view {
     &-content {
-        background-color: var(--rose50);
-        padding: 20px;
-        border-radius: 12px;
+      background-color: var(--rose50);
+      padding: 20px;
+      border-radius: 12px;
     }
   }
 }

@@ -1,1 +1,59 @@
-@use '../config/mixins' as *;
+@use "../config/mixins" as *;
+
+.offcanvas {
+  &-header {
+    background-color: var(--rose900);
+
+    h5 {
+      color: var(--white);
+    }
+  }
+  &-body {
+    background-color: var(--rose100);
+    background-image:
+      url("../../images/leadership-img-5.svg"),
+      url("../../images/lieadership-img-4.svg");
+    background-position:
+      right top,
+      left bottom;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  .menu {
+    li {
+        margin-bottom: 16px;
+      a {
+        font-family: STIXText;
+        color: #0f172a;
+        margin-bottom: 5px;
+      }
+    }
+
+    &-link {
+        margin-bottom: 10px;
+         a {
+          @include font(#0f172a, 16px, 500);
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          opacity: 0.9;
+        }
+        i {
+          font-size: 24px;
+        }
+    }
+
+    &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+       
+        a {
+             font-size: 24px;
+        color: #0f172a;
+        }
+    }
+    }
+  }
+

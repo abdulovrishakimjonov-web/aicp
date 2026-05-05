@@ -7,6 +7,13 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     margin-bottom: 80px;
+
+    @include devices("lg") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include devices("xs") {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
   .contacts-item {
     display: flex;
@@ -73,6 +80,9 @@
 
           span {
             @include font(rgba(51, 65, 85, 1), 16px, 500);
+            @include devices("xs") {
+              font-size: 14px;
+            }
           }
 
           input {
@@ -103,6 +113,10 @@
 
           span {
             @include font(rgba(51, 65, 85, 1), 16px, 500);
+
+            @include devices("xs") {
+              font-size: 14px;
+            }
           }
 
           input {
@@ -162,11 +176,24 @@
           color: var(--rose600);
         }
       }
+
+      &-iframe {
+        width: 368px;
+        height: 239px;
+        border-radius: 12px;
+
+        @include devices("md") {
+          width: 100%;
+        }
+      }
     }
   }
 
   &-main {
     display: flex;
     gap: 16px;
+    @include devices("md") {
+      flex-direction: column;
+    }
   }
 }

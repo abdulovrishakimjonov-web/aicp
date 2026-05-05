@@ -8,12 +8,20 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
 
+      @include devices("lg") {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
       &-cards {
         display: flex;
         align-items: center;
         justify-content: space-between;
         border-radius: 12px;
         overflow: hidden;
+
+        @include devices("sm") {
+          flex-direction: column;
+        }
 
         background:
           url("../../images/lieadership-img-4.svg") left bottom no-repeat,

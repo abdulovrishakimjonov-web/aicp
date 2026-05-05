@@ -8,23 +8,45 @@
       gap: 16px;
       padding: 80px 0;
 
+      @include devices("lg") {
+        grid-template-columns: 1fr;
+        padding: 50px 0;
+      }
+
+      @include devices("sm") {
+        padding: 30px 0;
+      }
+
       &-wrapper {
         &-text {
           display: flex;
           flex-direction: column;
           gap: 10px;
-            margin-bottom: 32px;             
+          margin-bottom: 32px;
 
           h2 {
             @include font(rgba(15, 23, 42, 1), 36px, 600);
+
             span {
               color: var(--rose600);
+            }
+
+            @include devices("md") {
+              font-size: 28px;
+            }
+
+            @include devices("sm") {
+              font-size: 22px;
             }
           }
 
           p {
             @include font(rgba(51, 65, 85, 1), 20px, 400);
             line-height: 1.6;
+
+            @include devices("sm") {
+              font-size: 14px;
+            }
           }
         }
 
@@ -37,6 +59,10 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 16px;
+
+            @include devices("md") {
+              grid-template-columns: 1fr;
+            }
 
             label {
               display: flex;
@@ -72,6 +98,10 @@
               display: grid;
               grid-template-columns: 1fr 1fr;
               gap: 16px;
+
+              @include devices("sm") {
+                grid-template-columns: 1fr;
+              }
 
               label {
                 display: flex;
@@ -118,8 +148,10 @@
 
                     p {
                       @include font(rgba(100, 116, 139, 1), 12px, 400);
-                      line-height: 1.5;
-                      margin: 0;
+
+                      @include devices("sm") {
+                        font-size: 14px;
+                      }
                     }
                   }
                 }
@@ -136,10 +168,16 @@
               width: fit-content;
               transition: all 0.3s ease;
 
+              @include devices("sm") {
+                font-size: 14px;
+                padding: 10px 20px;
+              }
+
               &:hover {
                 transform: translateY(-2px);
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
               }
+
               &:active {
                 transform: scale(0.97);
               }
@@ -157,6 +195,15 @@
 
           h2 {
             @include font(rgba(15, 23, 42, 1), 36px, 600);
+
+            @include devices("md") {
+              font-size: 28px;
+            }
+
+            @include devices("sm") {
+              font-size: 22px;
+            }
+
             span {
               color: var(--rose600);
             }
@@ -165,21 +212,33 @@
           p {
             @include font(rgba(51, 65, 85, 1), 20px, 400);
             line-height: 1.6;
+
+            @include devices("sm") {
+              font-size: 14px;
+            }
           }
         }
 
         &-code {
-          padding: 20px 20px 125px 20px;
+          padding: 20px;
           border-radius: 12px;
           background: var(--rose50);
           display: flex;
           flex-direction: column;
           gap: 16px;
 
+          @include devices("sm") {
+            padding: 16px;
+          }
+
           &-row {
             display: flex;
             align-items: center;
             gap: 10px;
+
+            @include devices("sm") {
+              flex-direction: column;
+            }
 
             input {
               flex: 1;
@@ -203,12 +262,16 @@
               cursor: pointer;
               white-space: nowrap;
               @include font(var(--white), 14px, 500);
-              transition: all 0.3s ease;
+
+              @include devices("sm") {
+                width: 100%;
+              }
 
               &:hover {
                 transform: translateY(-2px);
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
               }
+
               &:active {
                 transform: scale(0.97);
               }
@@ -231,6 +294,7 @@
               height: 100%;
               background: var(--rose600);
             }
+
             i {
               font-size: 20px;
               color: var(--rose600);
@@ -243,12 +307,20 @@
 
               b {
                 @include font(rgba(15, 23, 42, 1), 18px, 500);
+
+                @include devices("sm") {
+                  font-size: 16px;
+                }
               }
 
               p {
                 @include font(rgba(51, 65, 85, 1), 16px, 400);
                 line-height: 1.5;
                 margin: 0;
+
+                @include devices("sm") {
+                  font-size: 14px;
+                }
               }
             }
           }

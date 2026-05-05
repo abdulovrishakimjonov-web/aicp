@@ -1,6 +1,9 @@
-@use '../config/mixins' as *;
+@use "../config/mixins" as *;
 .breadcrumbs {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
+  @include devices("md") {
+    margin-bottom: 80px;
+  }
   &-img {
     position: relative;
 

@@ -3,116 +3,208 @@
 .why-us {
   &-section {
     margin-bottom: 80px;
+
+    @include devices("sm") {
+      margin-bottom: 50px;
+    }
+
     h2 {
       @include font(var(--slate900), 36px, 600);
       margin-bottom: 32px;
       text-align: center;
       font-family: "STIXVar";
+
       span {
         color: var(--rose600);
       }
+
+      @include devices("md") {
+        font-size: 28px;
+      }
+
+      @include devices("sm") {
+        font-size: 22px;
+      }
     }
+
     &-text {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       margin-bottom: 32px;
+
+      @include devices("lg") {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include devices("md") {
+        grid-template-columns: 1fr;
+      }
+
       &-cards {
         display: flex;
         align-items: center;
         gap: 12px;
+
+        @include devices("sm") {
+          align-items: flex-start;
+        }
+
         i {
           font-size: 75px;
           color: var(--rose700);
+
+          @include devices("md") {
+            font-size: 50px;
+          }
+
+          @include devices("sm") {
+            font-size: 40px;
+          }
         }
+
         &-card {
           display: flex;
           flex-direction: column;
           gap: 6px;
+
           b {
-            @include font(var(--slate800), 22px 600);
+            @include font(var(--slate800), 22px, 600);
             font-family: "STIXVar";
+
+            @include devices("md") {
+              font-size: 18px;
+            }
+
+            @include devices("sm") {
+              font-size: 16px;
+            }
           }
+
           p {
             @include font(var(--slate700), 18px, 500);
+
+            @include devices("md") {
+              font-size: 16px;
+            }
+
+            @include devices("sm") {
+              font-size: 14px; 
+            }
           }
         }
       }
     }
-   &-bottom {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
 
-  img {
-    width: 100%;
-    display: block;
-    border-radius: 16px;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image:url("../../images/why-us-img-2.png");
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-  }
-
-  &-text {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 40px;
-
-    &-link {
-      max-width: 70%;
-
-      &-line {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-        margin-bottom: 30px;
-
-        p {
-          @include font(var(--white), 16px, 400);
-          opacity: 0.95;
-          line-height: 1.6;
-        }
-      }
-
-      &-item {
-        p {
-          @include font(var(--white), 14px, 400);
-          opacity: 0.7;
-        }
-
-        h5 {
-            font-family: "STIXText";
-          @include font(var(--white), 22px, 600);
-        }
-      }
-    }
-
-    &-image {
-      width: 320px;
-      height: 308px;
-      flex-shrink: 0;
+    &-bottom {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
 
       img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-         border-radius: 12px;
+        display: block;
+        border-radius: 16px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("../../images/why-us-img-2.png");
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+      }
+
+      &-text {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+
+        @include devices("lg") {
+          flex-direction: column;
+          gap: 30px;
+          text-align: center;
+          padding: 24px;
+        }
+
+        @include devices("sm") {
+          padding: 16px;
+        }
+
+        &-link {
+          max-width: 70%;
+
+          @include devices("lg") {
+            max-width: 100%;
+          }
+
+          &-line {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 30px;
+
+            p {
+              @include font(var(--white), 16px, 400);
+              opacity: 0.95;
+              line-height: 1.6;
+
+              @include devices("sm") {
+                font-size: 14px;
+              }
+            }
+          }
+
+          &-item {
+            p {
+              @include font(var(--white), 14px, 400);
+              opacity: 0.7;
+            }
+
+            h5 {
+              font-family: "STIXText";
+              @include font(var(--white), 22px, 600);
+
+              @include devices("md") {
+                font-size: 18px;
+              }
+
+              @include devices("sm") {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+
+        &-image {
+          width: 320px;
+          height: 308px;
+          flex-shrink: 0;
+
+          @include devices("lg") {
+            width: 100%;
+            height: auto;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+
+            @include devices("lg") {
+              height: auto;
+            }
+          }
+        }
       }
     }
-  }
-}
   }
 }
