@@ -3,6 +3,13 @@
   &-section {
     margin-bottom: 80px;
 
+    @include devices("md") {
+        margin-bottom: 40px;
+    }
+     @include devices("sm") {
+        margin-bottom: 25px;
+    }
+
     .container {
       display: flex;
       align-items: center;
@@ -58,7 +65,7 @@
         }
 
         @include devices("sm") {
-          font-size: 14px; // ❗ eng kichik limit
+          font-size: 14px; 
         }
       }
 
@@ -88,7 +95,7 @@
 
     &-cards {
       display: flex;
-      align-items: center;
+      align-items: stretch;
       gap: 16px;
 
       @include devices("md") {
@@ -148,7 +155,7 @@
           margin-bottom: 33px;
 
           @include devices("sm") {
-            font-size: 14px; // ❗ min limit
+            font-size: 14px; 
           }
         }
 

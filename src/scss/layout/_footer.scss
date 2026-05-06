@@ -2,7 +2,6 @@
 
 .footer {
   background: linear-gradient(180deg, #be123c 0%, #881337 100%);
-  //   padding: 40px 0;
 
   &-top {
     display: flex;
@@ -60,7 +59,6 @@
     &-item {
       display: flex;
       flex-direction: column;
-      
 
       p {
         @include font(var(--white), 16px, 400);
@@ -79,8 +77,8 @@
         align-items: center;
         gap: 6px;
         @include devices("md") {
-        justify-content: center;
-      }
+          justify-content: center;
+        }
         a {
           border: 1px solid rgba(255, 255, 255, 0.2);
           border-radius: 12px;
@@ -95,59 +93,59 @@
   }
 
   &__bottom {
-  margin-top: 40px;
-  padding: 21px 0px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-
-  @include devices("md") {
-    flex-direction: column;      
-    justify-content: center;
-    align-items: center;         
-    text-align: center;
-  }
-
-  p {
-    @include font(var(--white), 18px, 400);
-  }
-
-  &-item {
-    opacity: 0.6;
+    margin-top: 40px;
+    padding: 21px 0px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 4px;
+    flex-wrap: wrap;
+    gap: 16px;
 
     @include devices("md") {
-      width: 100%;
-      justify-content: center;  
-      font-size: 15px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
-  }
 
-  a {
-    @include font(var(--white), 18px, 400);
-    text-decoration: none;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-    white-space: nowrap;
+    p {
+      @include font(var(--white), 18px, 400);
+    }
 
-    @include devices("md") {
+    &-item {
+      opacity: 0.6;
       display: flex;
       align-items: center;
-      justify-content: center; 
-      
-      img {
-        width: 100px;
-    }
-}
+      gap: 4px;
 
-    &:hover {
-      opacity: 0.8;
+      @include devices("md") {
+        width: 100%;
+        justify-content: center;
+        font-size: 15px;
+      }
+    }
+
+    a {
+      @include font(var(--white), 18px, 400);
+      text-decoration: none;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+      white-space: nowrap;
+
+      @include devices("md") {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 100px;
+        }
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
-}
 }

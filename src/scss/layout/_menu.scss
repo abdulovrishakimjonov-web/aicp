@@ -2,14 +2,30 @@
 
 .offcanvas {
   &-header {
-    background-color: var(--rose900);
+    background: var(--rose900);
 
     h5 {
-      color: var(--white);
+      color: #fff;
+      margin: 0;
     }
   }
+
   &-body {
+    position: relative;
+    padding: 24px;
     background-color: var(--rose100);
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &-body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
     background-image:
       url("../../images/leadership-img-5.svg"),
       url("../../images/lieadership-img-4.svg");
@@ -17,43 +33,162 @@
       right top,
       left bottom;
     background-repeat: no-repeat, no-repeat;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  &-body > * {
+    position: relative;
+    z-index: 1;
   }
 
   .menu {
-    li {
-        margin-bottom: 16px;
-      a {
-        font-family: STIXText;
-        color: #0f172a;
-        margin-bottom: 5px;
-      }
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    &-item {
+      list-style: none;
     }
 
     &-link {
-        margin-bottom: 10px;
-         a {
-          @include font(#0f172a, 16px, 500);
-          display: flex;
-          align-items: center;
-          gap: 6px;
-          opacity: 0.9;
-        }
-        i {
-          font-size: 24px;
-        }
+      @include font(#0f172a, 18px, 500);
+      display: block;
+      padding: 10px 14px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: var(--rose200);
+        padding-left: 18px;
+      }
     }
 
-    &-icon {
+    &-contact {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #334155;
+        font-size: 14px;
+
+        i {
+          font-size: 20px;
+        }
+
+        &:hover {
+          color: var(--rose600);
+        }
+      }
+    }
+
+    &-social {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+
+      a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #fff;
+
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 12px;
-       
-        a {
-             font-size: 24px;
-        color: #0f172a;
+
+        transition: all 0.3s ease;
+
+        i {
+          font-size: 18px;
+          color: #0f172a;
         }
+
+        &:hover {
+          background: var(--rose500);
+
+          i {
+            color: #fff;
+          }
+        }
+      }
     }
+
+    &-bottom {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
     }
   }
 
+  .lang {
+    position: relative;
+
+    &__btn {
+      background: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      transition: 0.3s;
+
+      &:hover {
+        background: var(--rose200);
+      }
+    }
+
+    &__menu {
+      position: absolute;
+      top: 45px;
+      left: 0;
+      width: 100%;
+
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+
+      display: none;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    &__item {
+      padding: 10px 12px;
+      cursor: pointer;
+
+      &:hover {
+        background: var(--rose100);
+      }
+    }
+
+    &:hover .lang__menu {
+      display: block;
+    }
+  }
+
+  .apply-btn {
+    background: var(--rose600);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--rose700);
+    }
+  }
+}

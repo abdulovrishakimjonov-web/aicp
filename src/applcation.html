@@ -11,97 +11,103 @@
     @@include('components/layout/breadcrumb.html')
     <div class="layout">
         <div class="container">
-           <div class="application-page">
-    <div class="application-page-main">
-        <div class="application-page-main-wrapper">
-            <div class="application-page-main-wrapper-text">
-                <h2>Ariza <span>topshirish</span></h2>
-                <p>Quyidagi formani to'ldirib, akademiyaga qabul uchun ariza yuboring. Bizning
-                    curatorlarimiz siz bilan tez orada bog'lanishadi.</p>
-            </div>
-            <form action="#" class="application-page-main-wrapper-form">
-                <div class="application-page-main-wrapper-form-grid">
-                    <label for="ism">
-                        <span>Ism *</span>
-                        <input type="text" id="ism" placeholder="Ismingizni yozing">
-                    </label>
-                    <label for="familiya">
-                        <span>Familiya *</span>
-                        <input type="text" id="familiya" placeholder="Familiyangizni yozing">
-                    </label>
-                    <label for="tug_ilgan_sana">
-                        <span>Tug'ilgan sana *</span>
-                        <input type="date" id="tug_ilgan_sana" placeholder="kk/oy/yil">
-                    </label>
-                    <label for="elektron_pochta">
-                        <span>Elektron pochta *</span>
-                        <input type="email" id="elektron_pochta" placeholder="Elektron pochtangizni yozing">
-                    </label>
-                    <label for="telefon">
-                        <span>Telefon raqam *</span>
-                        <input type="tel" id="telefon" placeholder="Telefon raqamingizni yozing">
-                    </label>
-                    <label for="talim_darajasi">
-                        <span>Ta'lim darajasi *</span>
-                        <select id="talim_darajasi">
-                            <option value="" disabled selected>Bakalavr</option>
-                            <option value="bakalavr">Bakalavr</option>
-                            <option value="magistr">Magistr</option>
-                            <option value="orta">O'rta maxsus</option>
-                        </select>
-                    </label>
-                </div>
-                <div class="application-page-main-wrapper-form-input">
-                    <div class="application-page-main-wrapper-form-input-side">
-                        <label for="diplom">
-                            <span>Diplom yoki shahodatnoma *</span>
-                            <div class="file-upload-box">
-                                <input type="file" id="diplom" accept="image/*,application/pdf" />
-                                <div class="file-upload-box-content">
-                                    <i class="i-upload"></i>
-                                    <p>Diplom yoki shahodatnoma nusxasini yuklang (tarjima tavsiya etiladi). Fayl hajmi: PDF, JPG yoki PNG formatida, hajmi 5 MB bo'lgan fayl yuklang</p>
+            <div class="application-page">
+                <div class="application-page-main">
+                    <div class="application-page-main-wrapper">
+                        <div class="application-page-main-wrapper-text">
+                            <h2>Ariza <span>topshirish</span></h2>
+                            <p>Quyidagi formani to'ldirib, akademiyaga qabul uchun ariza yuboring. Bizning
+                                curatorlarimiz siz bilan tez orada bog'lanishadi.</p>
+                        </div>
+                        <form action="#" class="application-page-main-wrapper-form">
+                            <div class="application-page-main-wrapper-form-grid">
+                                <label for="ism">
+                                    <span>Ism *</span>
+                                    <input type="text" id="ism" placeholder="Ismingizni yozing">
+                                </label>
+                                <label for="familiya">
+                                    <span>Familiya *</span>
+                                    <input type="text" id="familiya" placeholder="Familiyangizni yozing">
+                                </label>
+                                <label for="tug_ilgan_sana">
+                                    <span>Tug'ilgan sana *</span>
+                                    <input type="date" id="tug_ilgan_sana" placeholder="kk/oy/yil">
+                                </label>
+                                <label for="elektron_pochta">
+                                    <span>Elektron pochta *</span>
+                                    <input type="email" id="elektron_pochta" placeholder="Elektron pochtangizni yozing">
+                                </label>
+                                <label for="telefon">
+                                    <span>Telefon raqam *</span>
+                                    <input type="tel" id="telefon" placeholder="Telefon raqamingizni yozing">
+                                </label>
+                                <label for="talim_darajasi">
+                                    <span>Ta'lim darajasi *</span>
+                                    <select id="talim_darajasi">
+                                        <option value="" disabled selected>Bakalavr</option>
+                                        <option value="bakalavr">Bakalavr</option>
+                                        <option value="magistr">Magistr</option>
+                                        <option value="orta">O'rta maxsus</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="application-page-main-wrapper-form-input">
+                                <div class="application-page-main-wrapper-form-input-side">
+                                    <label for="diplom">
+                                        <span>Diplom yoki shahodatnoma *</span>
+                                        <div class="file-upload-box">
+                                            <input type="file" id="diplom" accept="image/*,application/pdf" />
+                                            <div class="file-upload-box-content">
+                                                <i class="i-upload"></i>
+                                                <p>Diplom yoki shahodatnoma nusxasini yuklang (tarjima tavsiya etiladi).
+                                                    Fayl hajmi: PDF, JPG yoki PNG formatida, hajmi 5 MB bo'lgan fayl
+                                                    yuklang</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label for="portfolio">
+                                        <span>Portfolio *</span>
+                                        <div class="file-upload-box">
+                                            <input type="file" id="portfolio" accept="image/*,application/pdf" />
+                                            <div class="file-upload-box-content">
+                                                <i class="i-upload"></i>
+                                                <p>Agar mavjud bo'lsa, ishlaringiz namunalarini (portfolio) yuklang.
+                                                    Portfolio faylini PDF yoki JPG/PNG formatida yuklang, maksimal 10 MB
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <button type="submit">Yuborish</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="application-page-main-group">
+                        <div class="application-page-main-group-field">
+                            <h2>Ariza holatini <span>tekshirish</span></h2>
+                            <p>Ariza raqamingiz yoki telefon raqamingizni kiriting va natijani ko‘ring.</p>
+                        </div>
+                        <div class="application-page-main-group-code">
+                            <div class="application-page-main-group-code-row">
+                                <input type="tel" placeholder="Masalan: A1023 yoki +998901234567"
+                                    class="contact-form__input" />
+                                <button class="contact-form__button">Tekshirish</button>
+                            </div>
+                            <div class="application-page-main-group-code-item">
+                                <i class="i-info"></i>
+                                <div class="application-page-main-group-code-item-text">
+                                    <b>Ma'lumot</b>
+                                    <p>Ariza raqamingiz yoki telefon raqamingizni kiriting va natijani ko'ring.</p>
+                                    <p>Qo'shimcha ma'lumot uchun operatorlarimiz siz bilan bog'lanadi yoki
+                                        qo'llab-quvvatlash markazi bilan bog'laning.</p>
                                 </div>
                             </div>
-                        </label>
-                        <label for="portfolio">
-                            <span>Portfolio *</span>
-                            <div class="file-upload-box">
-                                <input type="file" id="portfolio" accept="image/*,application/pdf" />
-                                <div class="file-upload-box-content">
-                                    <i class="i-upload"></i>
-                                    <p>Agar mavjud bo'lsa, ishlaringiz namunalarini (portfolio) yuklang. Portfolio faylini PDF yoki JPG/PNG formatida yuklang, maksimal 10 MB</p>
-                                </div>
-                            </div>
-                        </label>
+                        </div>
                     </div>
-                    <button type="submit">Yuborish</button>
-                </div>
-            </form>
-        </div>
 
-        <div class="application-page-main-group">
-            <div class="application-page-main-group-field">
-                <h2>Ariza holatini <span>tekshirish</span></h2>
-                <p>Ariza raqamingiz yoki telefon raqamingizni kiriting va natijani ko‘ring.</p>
-            </div>
-            <div class="application-page-main-group-code">
-                <div class="application-page-main-group-code-row">
-                    <input type="tel" placeholder="Masalan: A1023 yoki +998901234567" class="contact-form__input" />
-                    <button class="contact-form__button">Tekshirish</button>
-                </div>
-                <div class="application-page-main-group-code-item">
-                    <i class="i-info"></i>
-                    <div class="application-page-main-group-code-item-text">
-                        <b>Ma'lumot</b>
-                        <p>Ariza raqamingiz yoki telefon raqamingizni kiriting va natijani ko'ring.</p>
-                        <p>Qo'shimcha ma'lumot uchun operatorlarimiz siz bilan bog'lanadi yoki qo'llab-quvvatlash markazi bilan bog'laning.</p>
-                    </div>
                 </div>
             </div>
-        </div>
-
-    </div>
-</div>
         </div>
         @@include('components/layout/footer.html')
 

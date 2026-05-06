@@ -27,7 +27,6 @@ form {
         border: 1px solid var(--gray);
         border-radius: 4px;
         font-size: 16px;
-        // margin-bottom: 20px;
 
         @include devices(sm) {
             font-size: 14px;

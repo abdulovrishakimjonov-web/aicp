@@ -63,7 +63,6 @@
     position: relative;
     text-align: center;
     color: #fff;
-    max-width: 1000px;
 
     h2 {
       @include font(var(--white), 72px, 500);

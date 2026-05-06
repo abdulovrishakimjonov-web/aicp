@@ -13,7 +13,6 @@
       text-align: center;
       margin-bottom: 32px;
       font-family: "STIXVar";
-      
 
       span {
         color: var(--rose600);
@@ -35,6 +34,12 @@
 
       @include devices("md") {
         flex-direction: column;
+      }
+    }
+
+    &-image {
+      @include devices("md") {
+        width: 100%;
       }
     }
 

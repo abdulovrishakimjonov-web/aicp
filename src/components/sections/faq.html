@@ -73,7 +73,6 @@
         items.forEach(item => {
             const answer = item.querySelector(".faq-section-item-answer");
 
-            // default open bo‘lganlarni to‘g‘rilash
             if (item.classList.contains("active")) {
                 answer.style.maxHeight = answer.scrollHeight + "px";
             }
@@ -81,14 +80,12 @@
             item.addEventListener("click", () => {
                 const isOpen = item.classList.contains("active");
 
-                // 🔥 boshqa hammasini yopish (optional professional UX)
                 items.forEach(i => {
                     const a = i.querySelector(".faq-section-item-answer");
                     i.classList.remove("active");
                     a.style.maxHeight = null;
                 });
 
-                // ochish / yopish
                 if (!isOpen) {
                     item.classList.add("active");
                     answer.style.maxHeight = answer.scrollHeight + "px";
