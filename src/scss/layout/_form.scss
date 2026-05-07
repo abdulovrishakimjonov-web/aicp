@@ -1,35 +1,35 @@
-@use '../config/mixins' as *;
+@use "../config/mixins" as *;
 
 form {
-    width: 100%;
-    // padding: 30px;
-    background: var(--white);
-    border-radius: 4px;
+  width: 100%;
+  // padding: 30px;
+  background: var(--white);
+  border-radius: 4px;
 
-    @include devices(md) {
-        padding: 20px;
-    }
+  @include devices(md) {
+    padding: 20px;
+  }
+
+  @include devices(sm) {
+    font-size: 16px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+    font-size: 16px;
 
     @include devices(sm) {
-        font-size: 16px;
+      font-size: 14px;
     }
-
-    label {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    input,
-    textarea,
-    select {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid var(--gray);
-        border-radius: 4px;
-        font-size: 16px;
-
-        @include devices(sm) {
-            font-size: 14px;
-        }
-    }
+  }
 }

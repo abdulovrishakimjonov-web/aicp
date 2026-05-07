@@ -1,56 +1,54 @@
 @use "./mixins" as *;
 
 :root {
-    --black: #000000;
-    --white: #FFFFFF;
+  --black: #000000;
+  --white: #ffffff;
 
-    --rose50: rgba(255, 241, 242, 1);
-    --rose100:rgba(255, 228, 230, 1);
-    --rose200:rgba(254, 205, 211, 1);
-    --rose300:rgba(253, 164, 175, 1);
-    --rose400:rgba(251, 113, 133, 1);
-    --rose500:rgba(244, 63, 94, 1);
-    --rose600:rgba(225, 29, 72, 1);
-    --rose700:rgba(190, 18, 60, 1);
-    --rose800:rgba(159, 18, 57, 1);
-    --rose900:rgba(136, 19, 55, 1);
-    --rose950:rgba(76, 5, 25, 1);
+  --rose50: rgba(255, 241, 242, 1);
+  --rose100: rgba(255, 228, 230, 1);
+  --rose200: rgba(254, 205, 211, 1);
+  --rose300: rgba(253, 164, 175, 1);
+  --rose400: rgba(251, 113, 133, 1);
+  --rose500: rgba(244, 63, 94, 1);
+  --rose600: rgba(225, 29, 72, 1);
+  --rose700: rgba(190, 18, 60, 1);
+  --rose800: rgba(159, 18, 57, 1);
+  --rose900: rgba(136, 19, 55, 1);
+  --rose950: rgba(76, 5, 25, 1);
 
-    --pink50:rgba(253, 242, 248, 1);
-    --pink100:rgba(252, 231, 243, 1);
-    --pink200:rgba(251, 207, 232, 1);
-    --pink300:rgba(249, 168, 212, 1);
-    --pink400:rgba(244, 114, 182, 1);
-    --pink500:rgba(236, 72, 153, 1);
-    --pink600:rgba(219, 39, 119, 1);
-    --pink700:rgba(190, 24, 93, 1);
-    --pink800:rgba(157, 23, 77, 1);
-    --pink900:rgba(131, 24, 67, 1);
-    --pink950:rgba(80, 7, 36, 1);
+  --pink50: rgba(253, 242, 248, 1);
+  --pink100: rgba(252, 231, 243, 1);
+  --pink200: rgba(251, 207, 232, 1);
+  --pink300: rgba(249, 168, 212, 1);
+  --pink400: rgba(244, 114, 182, 1);
+  --pink500: rgba(236, 72, 153, 1);
+  --pink600: rgba(219, 39, 119, 1);
+  --pink700: rgba(190, 24, 93, 1);
+  --pink800: rgba(157, 23, 77, 1);
+  --pink900: rgba(131, 24, 67, 1);
+  --pink950: rgba(80, 7, 36, 1);
 
-    --red50:#FEF2F2;
-    --red100:#FFE2E2;
-    --red200:#FECACA;
-    --red300:#FCA5A5;
-    --red400:#F87171;
-    --red500:#EF4444;
-    --red600:#DC2626;
-    --red700:#B91C1C;
-    --red800:#991B1B;
-    --red900:#7F1D1D;
-    --red950:#450A0A;
+  --red50: #fef2f2;
+  --red100: #ffe2e2;
+  --red200: #fecaca;
+  --red300: #fca5a5;
+  --red400: #f87171;
+  --red500: #ef4444;
+  --red600: #dc2626;
+  --red700: #b91c1c;
+  --red800: #991b1b;
+  --red900: #7f1d1d;
+  --red950: #450a0a;
 
+  --height-header: 84px;
+  --width-sidebar: 360px;
+  --width-container: 1520px;
 
+  @include devices(lg) {
+    --width-container: 1024px;
+  }
 
-    --height-header: 84px;
-    --width-sidebar: 360px;
-    --width-container: 1520px;
-
-    @include devices(lg) {
-        --width-container: 1024px;
-    }
-
-    @include devices(md) {
-        --width-container: 800px;
-    }
+  @include devices(md) {
+    --width-container: 800px;
+  }
 }
