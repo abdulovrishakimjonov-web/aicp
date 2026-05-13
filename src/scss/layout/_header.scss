@@ -12,28 +12,39 @@
   & {
     transition: all 0.25s ease-in-out;
   }
-
   &.index {
-    .header-button {
+    .header-main {
       background: transparent;
+      &-top {
+        border-bottom: 1px solid #ffffff33;
+      }
     }
 
     .header-bottom {
-      backdrop-filter: blur(8px);
+      backdrop-filter: none;
+      background: transparent;
     }
 
     .header-bottom-low-item a {
       color: var(--white);
     }
+    .header-bottom-low-logo {
+      filter: brightness(1.4);
+    }
+    .lang__btn {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(6.199999809265137px);
+      color: var(--white);
+    }
   }
 
-  &:not(.index) {
-    .header-button {
-      background: #fff;
+  &.page {
+    .header-bottom-low-logo {
+      filter: brightness(1.4);
     }
-
     .header-bottom {
-      background: var(--white);
+      background: transparent;
+      backdrop-filter: blur(12px);
     }
 
     .header-line {
@@ -41,13 +52,12 @@
     }
 
     .header-bottom-low-item a {
-      color: rgba(15, 23, 42, 1);
+      color: var(--white);
     }
-
     .lang__btn {
-      color: rgba(15, 23, 42, 1);
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      background: rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(6.199999809265137px);
+      color: var(--white);
     }
   }
 
@@ -59,6 +69,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      border-bottom: 1px solid #ffffff33;
 
       &-link {
         display: flex;
@@ -73,7 +84,6 @@
           display: flex;
           align-items: center;
           gap: 6px;
-          opacity: 0.9;
         }
 
         span {
@@ -118,7 +128,7 @@
   }
 
   &-bottom {
-    backdrop-filter: blur(8px);
+    background: #fff;
 
     &-low {
       padding: 12px 0;
@@ -127,6 +137,7 @@
       align-items: center;
 
       &-logo {
+        filter: brightness(0.4);
         @include devices("sm") {
           width: 200px;
         }
@@ -137,11 +148,18 @@
         gap: 50px;
 
         @include devices("lg") {
-          display: none;
+          gap: 20px;
+        }
+        @include devices("md") {
+          display: none
         }
         a {
-          @include font(var(--white), 18px, 500);
-          opacity: 0.8;
+          @include font(var(--black1), 18px, 500);
+
+          @include devices("lg") {
+            font-size: 16px;
+          }
+
         }
       }
 
@@ -155,10 +173,10 @@
           &__btn {
             padding: 9px 13px;
             border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            background: rgba(255, 255, 255, 0.1);
+            color: rgba(15, 23, 42, 1);
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.05);
             backdrop-filter: blur(8px);
-            color: #fff;
             align-items: center;
             display: flex;
             gap: 6px;
@@ -166,7 +184,6 @@
             transition: all 0.3s ease;
 
             &:hover {
-              transform: translateY(-2px);
               box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
               background: rgba(255, 255, 255, 0.2);
             }
@@ -225,7 +242,6 @@
           }
 
           &:hover {
-            transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
           }
 

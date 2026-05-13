@@ -28,7 +28,7 @@
                 <div class="header-main-top-link">
                     <button class="header-main-top-link-button" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
-                        <i class="i-dropdown"></i>
+                        <i class="i-menu-burger"></i>
                     </button>
                     <a href="#">
                         <i class="i-phone"></i>
@@ -211,13 +211,32 @@
         </div>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.header');
+            if (!header) return;
 
+            const threshold = 30;
+
+            const updateHeader = () => {
+                if (window.scrollY > threshold) {
+                    header.classList.remove('page');
+                } else {
+                    header.classList.add('page');
+                }
+            };
+
+            updateHeader();
+
+            window.addEventListener('scroll', updateHeader, { passive: true });
+        });
+    </script>
 
     <footer class="footer">
     <div class="container">
         <div class="footer-top">
             <div class="footer-top-logo">
-                <img src="../../images/logo.svg" alt="">
+                <img src="./images/logo.svg" alt="">
                 <p>Xalqaro standartlarga asoslangan fashion <br> va dizayn ta’limi markazi.</p>
             </div>
             <div class="footer-top-link">
@@ -230,6 +249,7 @@
                     <a href="">info@aicp.uz</a>
                 </div>
             </div>
+            <div class="footer-top-main">
             <div class="footer-top-item">
                 <p>Manzil:</p>
                 <a href="#">Uzbekistan , Tashkent ,Bunyodakor 25-uy </a>
@@ -237,17 +257,17 @@
                     <a href="#"><i class="i-inistagram"></i></a>
                     <a href="#"><i class="i-facebook"></i></a>
                     <a href="#"><i class="i-yutube"></i></a>
-                    <!-- <a href="#"><i class="i-teligram"></i></a> -->
                     <a href="#"><i class="i-linkdin"></i></a>
                 </div>
             </div>
             <iframe src="https://www.google.com/maps?q=Tashkent&output=embed" width="284" height="136"
                 style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy">
             </iframe>
+            </div>
         </div>
 
         <div class="footer__bottom">
-            <p class="footer__bottom-item">© <span id="y"></span> 2026 Akademiya. Barcha huquqlar himoyalangan.</p>
+            <p class="footer__bottom-item">© <span id="y"></span> Akademiya. Barcha huquqlar himoyalangan.</p>
             <script>y.textContent = new Date().getFullYear()</script>
             <a href="https://proend.ru" target="_blank" class="footer__bottom-item ">
                 Ishlab chiqaruvchi

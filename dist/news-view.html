@@ -28,7 +28,7 @@
                 <div class="header-main-top-link">
                     <button class="header-main-top-link-button" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
-                        <i class="i-dropdown"></i>
+                        <i class="i-menu-burger"></i>
                     </button>
                     <a href="#">
                         <i class="i-phone"></i>
@@ -162,66 +162,122 @@
                     </li>
                 </ul>
             </li> -->
+    <div class="breadcrumbs">
+    <div class="breadcrumbs-img">
+        <img src="./images/breadcrumb-img-1.png" alt="">
+
+        <div class="breadcrumbs-img-overlay">
+            <a href="#">Biz haqimizda</a>
+        </div>
+
+    </div>
+</div>
     <div class="layout">
         <div class="container">
             <div class="news-view">
-
-                <div class="content">
-                    <img src="./images/news-view-img.svg" alt="">
-                    <div class="news-view__title">
-                        30 идей для вашего проекта, который понравится приемной комиссии
+                <div class="news-view-main">
+                    <div class="news-view-main-text">
+                        <h2>Beyond metrics, swift currents shape the future's thread.</h2>
+                        <p>Bizning akademiya xalqaro standartlarga asoslangan holda fashion dizayn va kiyim
+                            konstruksiyasi bo‘yicha yuqori sifatli ta’limni taqdim etadi.
+                            Ta’lim jarayonida nazariya va amaliyot uyg‘unligi ta’minlanib, talabalar zamonaviy
+                            texnologiyalar hamda professional metodikalar asosida bilim oladilar. Dasturlar Fransuz
+                            fashion maktablarining ilg‘or tajribasiga tayangan holda ishlab chiqilgan.
+                            Akademiya bitiruvchilari sanoat talablariga mos, mustaqil fikrlovchi va yuqori malakali
+                            mutaxassislar sifatida shakllanadi.</p>
+                            <div class="news-view-main-text-link">
+                                <div class="news-view-main-text-link-item">
+                                    <p><i class="i-time"></i>22.10.2023</p>
+                                    <p>/</p>
+                                    <p><i class="i-eye"></i>23</p>
+                                </div>
+                            </div>
                     </div>
-                    <div class="carousel--wrapper">
-                        <div class="news-img-carousel">
-                            <div class="carousel-track"></div>
+                    <img src="./images/news-view-img.svg" alt="">
+                </div>
+                    <div class="content">
+                        <div class="news-view__details">
+                            <label for="share" class="share-link" id="share-label" style="cursor:pointer;">
+
+                                <script>
+                                    const patchYandexButton = () => {
+                                        const moreBtn = document.querySelector(
+                                            '.ya-share2__badge.ya-share2__badge_more'
+                                        );
+
+                                        const innerLink = document.querySelector(
+                                            '.ya-share2__link.ya-share2__link_more.ya-share2__link_more-button-type_short'
+                                        );
+
+                                        if (!moreBtn || !innerLink) return false;
+
+                                        innerLink.style.padding = '0';
+
+                                        moreBtn.style.cssText = `
+                        background: var(--white);
+                        color: var(--black1);
+                        border: 0;
+                        outline: 0;
+                    `;
+
+                                        moreBtn.innerHTML = `
+                        <span 
+                            class="news-view__share"
+                            style="
+                                color: var(--neutral700);
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 6px;
+                            "
+                        >
+                            <i class="i-share"></i>
+
+                            <span 
+                                class="share"
+                                style="
+                                    margin-top: 4px;
+                                    text-align: center;
+                                "
+                            >
+                                Поделиться
+                            </span>
+                        </span>
+                    `;
+
+                                        return true;
+                                    };
+
+                                    const startPatch = () => {
+                                        if (patchYandexButton()) return;
+
+                                        const observer = new MutationObserver(() => {
+                                            if (patchYandexButton()) observer.disconnect();
+                                        });
+
+                                        observer.observe(document.body, {
+                                            childList: true,
+                                            subtree: true
+                                        });
+
+                                        setTimeout(() => observer.disconnect(), 10000);
+                                    };
+
+                                    const script = document.createElement('script');
+                                    script.src = 'https://yastatic.net/share2/share.js';
+                                    script.onload = startPatch;
+
+                                    document.head.appendChild(script);
+                                </script>
+
+                                <div id="share" class="ya-share2 share-link" data-lang="ru" data-curtain data-limit="0"
+                                    data-more-button-type="short" data-services="telegram,twitter,whatsapp,linkedin">
+                                </div>
+
+                            </label>
                         </div>
                     </div>
-                    <div class="carousel-lines"></div>
-                    <div class="news-view__details">
-                        <div class="news-view__date">15.09.2025</div>
-                        <label for="share" class=" share-link" id="share-label" style="cursor:pointer;">
-                            <script>
-                                const patchYandexButton = () => {
-                                    const moreBtn = document.querySelector('.ya-share2__badge.ya-share2__badge_more');
-                                    const innerLink = document.querySelector('.ya-share2__link.ya-share2__link_more.ya-share2__link_more-button-type_short');
-
-                                    if (!moreBtn || !innerLink) return false;
-
-                                    innerLink.style.padding = '0';
-                                    moreBtn.style.cssText = 'background: var(--white);color:var(--black1); border: 0; outline: 0;';
-                                    moreBtn.innerHTML = `
-      <span class="news-view__share d-flex gap-2 align-items-center" style="color:var(--neutral700)">
-        <i class="i-share  "></i><span class="d-flex align-items-center share">Поделиться</span>
-      </span>
-    `;
-
-                                    return true;
-                                };
-
-                                const startPatch = () => {
-                                    if (patchYandexButton()) return;
-
-                                    const observer = new MutationObserver(() => {
-                                        if (patchYandexButton()) observer.disconnect();
-                                    });
-
-                                    observer.observe(document.body, { childList: true, subtree: true });
-                                    setTimeout(() => observer.disconnect(), 10000);
-                                };
-
-                                const script = document.createElement('script');
-                                script.src = 'https://yastatic.net/share2/share.js';
-                                script.onload = startPatch;
-                                document.head.appendChild(script);
-                            </script>
-
-
-                            <div id="share" class="ya-share2 share-link" data-lang="ru" data-curtain data-limit="0"
-                                data-more-button-type="short" data-services="telegram,twitter,whatsapp,linkedin">
-                            </div>
-                        </label>
-                    </div>
-                </div>
                 <script>
                     (function () {
                         const images = [
@@ -561,11 +617,55 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.header');
+            if (!header) return;
+
+            const threshold = 30;
+
+            const updateHeader = () => {
+                if (window.scrollY > threshold) {
+                    header.classList.remove('page');
+                } else {
+                    header.classList.add('page');
+                }
+            };
+
+            updateHeader();
+
+            window.addEventListener('scroll', updateHeader, { passive: true });
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.header');
+            if (!header) return;
+
+            const threshold = 30;
+
+            const updateHeader = () => {
+                if (window.scrollY > threshold) {
+                    header.classList.remove('page');
+                } else {
+                    header.classList.add('page');
+                }
+            };
+
+            updateHeader();
+
+            window.addEventListener('scroll', updateHeader, { passive: true });
+        });
+    </script>
+
     <footer class="footer">
     <div class="container">
         <div class="footer-top">
             <div class="footer-top-logo">
-                <img src="../../images/logo.svg" alt="">
+                <img src="./images/logo.svg" alt="">
                 <p>Xalqaro standartlarga asoslangan fashion <br> va dizayn ta’limi markazi.</p>
             </div>
             <div class="footer-top-link">
@@ -578,6 +678,7 @@
                     <a href="">info@aicp.uz</a>
                 </div>
             </div>
+            <div class="footer-top-main">
             <div class="footer-top-item">
                 <p>Manzil:</p>
                 <a href="#">Uzbekistan , Tashkent ,Bunyodakor 25-uy </a>
@@ -585,17 +686,17 @@
                     <a href="#"><i class="i-inistagram"></i></a>
                     <a href="#"><i class="i-facebook"></i></a>
                     <a href="#"><i class="i-yutube"></i></a>
-                    <!-- <a href="#"><i class="i-teligram"></i></a> -->
                     <a href="#"><i class="i-linkdin"></i></a>
                 </div>
             </div>
             <iframe src="https://www.google.com/maps?q=Tashkent&output=embed" width="284" height="136"
                 style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy">
             </iframe>
+            </div>
         </div>
 
         <div class="footer__bottom">
-            <p class="footer__bottom-item">© <span id="y"></span> 2026 Akademiya. Barcha huquqlar himoyalangan.</p>
+            <p class="footer__bottom-item">© <span id="y"></span> Akademiya. Barcha huquqlar himoyalangan.</p>
             <script>y.textContent = new Date().getFullYear()</script>
             <a href="https://proend.ru" target="_blank" class="footer__bottom-item ">
                 Ishlab chiqaruvchi

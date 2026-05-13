@@ -19,7 +19,7 @@
 
                     <div class="apply-page-item">
                         <div class="apply-page-item-icon">
-                            <img src="./images/apply-img-1.svg" alt="">
+                            <img src="@/images/apply-img-1.svg" alt="">
                             <h2>1</h2>
                         </div>
                         <div class="apply-page-content">
@@ -30,7 +30,7 @@
 
                     <div class="apply-page-item">
                         <div class="apply-page-item-icon">
-                            <img src="./images/apply-img-2.svg" alt="">
+                            <img src="@/images/apply-img-2.svg" alt="">
                             <h2>2</h2>
                         </div>
                         <div class="apply-page-content">
@@ -42,7 +42,7 @@
 
                     <div class="apply-page-item">
                         <div class="apply-page-item-icon">
-                            <img src="./images/apply-img-3.svg" alt="">
+                            <img src="@/images/apply-img-3.svg" alt="">
                             <h2>3</h2>
                         </div>
                         <div class="apply-page-content">
@@ -53,7 +53,7 @@
 
                     <div class="apply-page-item">
                         <div class="apply-page-item-icon">
-                            <img src="./images/apply-img-4.svg" alt="">
+                            <img src="@/images/apply-img-4.svg" alt="">
                             <h2>4</h2>
                         </div>
                         <div class="apply-page-content">
@@ -170,7 +170,26 @@
     </div>
 
 
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.header');
+            if (!header) return;
 
+            const threshold = 30;
+
+            const updateHeader = () => {
+                if (window.scrollY > threshold) {
+                    header.classList.remove('page');
+                } else {
+                    header.classList.add('page');
+                }
+            };
+
+            updateHeader();
+
+            window.addEventListener('scroll', updateHeader, { passive: true });
+        });
+    </script>
     @@include('components/layout/footer.html')
 
 </body>

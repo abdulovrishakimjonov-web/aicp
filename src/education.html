@@ -44,25 +44,25 @@
                     <h3>O‘quv <span>dasturi modullari</span></h3>
                     <div class="education-page-wrapper-item">
                         <div class="education-page-wrapper-item-card">
-                            <img src="./images/education-img-3.svg" alt="">
+                            <img src="@/images/education-img-3.svg" alt="">
                             <b>Kiyim konstruksiyasi</b>
                             <p class="line-clamp-3">Mukammal bichish va andoza tayyorlash san'ati. Konstruksiya asoslari
                                 va drapping texnikasi.</p>
                         </div>
                         <div class="education-page-wrapper-item-card">
-                            <img src="./images/education-img-4.svg" alt="">
+                            <img src="@/images/education-img-4.svg" alt="">
                             <b>Fashion dizayn asoslari</b>
                             <p class="line-clamp-3">Mukammal bichish va andoza tayyorlash san'ati. Konstruksiya asoslari
                                 va drapping texnikasi.</p>
                         </div>
                         <div class="education-page-wrapper-item-card">
-                            <img src="./images/education-img-5.svg" alt="">
+                            <img src="@/images/education-img-5.svg" alt="">
                             <b>To‘qimachilik materiallari</b>
                             <p class="line-clamp-3">Mukammal bichish va andoza tayyorlash san'ati. Konstruksiya asoslari
                                 va drapping texnikasi.</p>
                         </div>
                         <div class="education-page-wrapper-item-card">
-                            <img src="./images/education-img-6.svg" alt="">
+                            <img src="@/images/education-img-6.svg" alt="">
                             <b>Kompyuter yordamida dizayn</b>
                             <p class="line-clamp-3">Mukammal bichish va andoza tayyorlash san'ati. Konstruksiya asoslari
                                 va drapping texnikasi.</p>
@@ -77,28 +77,28 @@
 
                     <div class="education-page-bottom-main">
                         <div class="education-page-bottom-main-item">
-                            <img src="./images/education-img-7.svg" alt="">
+                            <img src="@/images/education-img-7.svg" alt="">
                             <div class="education-page-bottom-main-item-text">
                                 <b>Portfolio</b>
                                 <p>Xalqaro brendlarga munosib professional ishlar to‘plami.</p>
                             </div>
                         </div>
                         <div class="education-page-bottom-main-item">
-                            <img src="./images/education-img-8.svg" alt="">
+                            <img src="@/images/education-img-8.svg" alt="">
                             <div class="education-page-bottom-main-item-text">
                                 <b>Amaliy ko'nikmalar</b>
                                 <p>Moda olamida talab qilinadigan barcha amaliy ko'nikmalar.</p>
                             </div>
                         </div>
                         <div class="education-page-bottom-main-item">
-                            <img src="./images/education-img-9.svg" alt="">
+                            <img src="@/images/education-img-9.svg" alt="">
                             <div class="education-page-bottom-main-item-text">
                                 <b>Sertifikat</b>
                                 <p>Akademiyani tamomlaganlik to‘g‘risidagi xalqaro diplom.</p>
                             </div>
                         </div>
                         <div class="education-page-bottom-main-item">
-                            <img src="./images/education-img-10.svg" alt="">
+                            <img src="@/images/education-img-10.svg" alt="">
                             <div class="education-page-bottom-main-item-text">
                                 <b>Karyera tayyorgarligi</b>
                                 <p>Etakchi moda uylarida ishlashga to'liq tayyorgarlik.</p>
@@ -110,7 +110,26 @@
         </div>
 
 
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.header');
+            if (!header) return;
 
+            const threshold = 30;
+
+            const updateHeader = () => {
+                if (window.scrollY > threshold) {
+                    header.classList.remove('page');
+                } else {
+                    header.classList.add('page');
+                }
+            };
+
+            updateHeader();
+
+            window.addEventListener('scroll', updateHeader, { passive: true });
+        });
+    </script>
         @@include('components/layout/footer.html')
 
 </body>

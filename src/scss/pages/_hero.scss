@@ -127,12 +127,7 @@
         color: #fff;
 
         &:hover {
-          transform: translateY(-2px);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        &:active {
-          transform: scale(0.97);
         }
       }
 
@@ -143,12 +138,7 @@
         border: 1px solid rgba(255, 255, 255, 0.5);
 
         &:hover {
-          transform: translateY(-2px);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        &:active {
-          transform: scale(0.97);
         }
       }
     }

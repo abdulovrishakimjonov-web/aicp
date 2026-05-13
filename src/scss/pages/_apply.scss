@@ -30,7 +30,6 @@
     }
     &-item {
       display: flex;
-      align-items: flex-start;
       flex-direction: column;
       gap: 16px;
       position: relative;
@@ -50,10 +49,11 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 243px;
+        gap: 16px;
+
         h2 {
           font-family: "STIXVar";
-          @include font(50px, 600);
+          @include font(transparent, 50px, 600);
           background: linear-gradient(
             180deg,
             #db2777 0%,
@@ -63,6 +63,12 @@
           -webkit-text-fill-color: transparent;
           background-clip: text;
           color: transparent;
+        }
+
+        img {
+          aspect-ratio: 1/1;
+          width: auto;
+          height: 52px;
         }
       }
     }
@@ -128,8 +134,7 @@
             padding: 20px;
 
             background-image:
-              url("../../images/apply-img-5.png"),
-              url("../../images/apply-img-6.png");
+              url("@/images/apply-img-5.png"), url("@/images/apply-img-6.png");
 
             background-position:
               top right,
@@ -277,17 +282,13 @@
           padding: 24px;
           overflow: hidden;
 
-          background: url("../../images/apply-img-7.jpg") center/cover no-repeat;
+          background: url("@/images/apply-img-7.jpg") center/cover no-repeat;
 
           &::before {
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(
-              90deg,
-              rgba(143, 32, 82, 0.9) 0%,
-              rgba(120, 23, 67, 0.6) 100%
-            );
+            background: rgba(225, 29, 72, 0.5);
             z-index: 1;
           }
 

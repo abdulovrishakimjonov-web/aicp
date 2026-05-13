@@ -16,7 +16,7 @@
 
                     <div class="contacts-item">
                         <div class="contacts-icon">
-                            <img src="./images/contacts-img-1.svg" alt="">
+                            <img src="@/images/contacts-img-1.svg" alt="">
                         </div>
                         <div class="contacts-content">
                             <p>Telefon raqam:</p>
@@ -26,7 +26,7 @@
 
                     <div class="contacts-item">
                         <div class="contacts-icon">
-                            <img src="./images/contacts-img-2.svg" alt="">
+                            <img src="@/images/contacts-img-2.svg" alt="">
                         </div>
                         <div class="contacts-content">
                             <p>Elektron pochta:</p>
@@ -36,7 +36,7 @@
 
                     <div class="contacts-item">
                         <div class="contacts-icon">
-                            <img src="./images/contacts-img-3.svg" alt="">
+                            <img src="@/images/contacts-img-3.svg" alt="">
                         </div>
                         <div class="contacts-content">
                             <p>Ish vaqtlari:</p>
@@ -46,7 +46,7 @@
 
                     <div class="contacts-item">
                         <div class="contacts-icon">
-                            <img src="./images/contacts-img-4.svg" alt="">
+                            <img src="@/images/contacts-img-4.svg" alt="">
                         </div>
                         <div class="contacts-content">
                             <p>Manzil:</p>
@@ -67,7 +67,7 @@
                                     <input type="text" placeholder="Kiriting">
                                 </label>
                                 <label for="#">
-                                    <span>Telefon raqam:</span>
+                                    <span>Telefon:</span>
                                     <input type="text" placeholder="Kiriting">
                                 </label>
                                 <label for="#">
@@ -78,7 +78,7 @@
                             <div class="contacts-wrapper-form-text">
                                 <label for="#">
                                     <span>Murojaat matni:</span>
-                                    <input type="text" placeholder="Kiriting">
+                                     <textarea name="Kiriting" id="text"></textarea>
                                 </label>
                                 <button>Yuborish</button>
                             </div>
@@ -102,6 +102,28 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.header');
+            if (!header) return;
+
+            const threshold = 30;
+
+            const updateHeader = () => {
+                if (window.scrollY > threshold) {
+                    header.classList.remove('page');
+                } else {
+                    header.classList.add('page');
+                }
+            };
+
+            updateHeader();
+
+            window.addEventListener('scroll', updateHeader, { passive: true });
+        });
+    </script>
     @@include('components/layout/footer.html')
 
 </body>

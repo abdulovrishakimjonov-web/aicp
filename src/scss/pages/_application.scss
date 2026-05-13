@@ -3,14 +3,13 @@
 .application {
   &-page {
     &-main {
-      display: grid;
-      grid-template-columns: 1fr 496px;
+      display: flex;
       gap: 16px;
-      padding: 80px 0;
+      align-items: stretch;
+      margin-bottom: 100px;
 
       @include devices("lg") {
-        grid-template-columns: 1fr;
-        padding: 50px 0;
+        flex-direction: column;
       }
 
       @include devices("sm") {
@@ -23,8 +22,10 @@
           flex-direction: column;
           gap: 10px;
           margin-bottom: 32px;
+          max-width: 880px;
 
           h2 {
+            font-family: "STIXVar";
             @include font(rgba(15, 23, 42, 1), 36px, 600);
 
             span {
@@ -70,16 +71,16 @@
               gap: 6px;
 
               span {
-                @include font(rgba(51, 65, 85, 1), 14px, 500);
+                @include font(rgba(51, 65, 85, 1), 18px, 500);
               }
 
               input,
               select {
-                padding: 10px 14px;
+                padding: 14px 16px;
                 border-radius: 8px;
                 background-color: rgba(248, 250, 252, 1);
                 border: 1px solid rgba(226, 232, 240, 1);
-                @include font(rgba(100, 116, 139, 1), 14px, 400);
+                @include font(rgba(100, 116, 139, 1), 16px, 400);
                 outline: none;
 
                 &:focus {
@@ -117,7 +118,7 @@
                   border-radius: 8px;
                   border: 1.5px dashed rgba(226, 232, 240, 1);
                   background-color: rgba(248, 250, 252, 1);
-                  padding: 20px 16px;
+                  padding: 24px 16px;
                   cursor: pointer;
                   min-height: 120px;
                   display: flex;
@@ -147,7 +148,7 @@
                     }
 
                     p {
-                      @include font(rgba(100, 116, 139, 1), 12px, 400);
+                      @include font(rgba(100, 116, 139, 1), 14px, 400);
 
                       @include devices("sm") {
                         font-size: 14px;
@@ -174,7 +175,6 @@
               }
 
               &:hover {
-                transform: translateY(-2px);
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
               }
 
@@ -194,6 +194,7 @@
           margin-bottom: 40px;
 
           h2 {
+            font-family: "STIXVar";
             @include font(rgba(15, 23, 42, 1), 36px, 600);
 
             @include devices("md") {
@@ -242,12 +243,12 @@
 
             input {
               flex: 1;
-              padding: 10px 14px;
+              padding: 12px 14px;
               border: 1px solid rgba(226, 232, 240, 1);
               border-radius: 8px;
               outline: none;
               background: var(--white);
-              @include font(rgba(100, 116, 139, 1), 14px, 400);
+              @include font(rgba(100, 116, 139, 1), 18px, 400);
 
               &:focus {
                 border-color: var(--rose600);
@@ -255,20 +256,19 @@
             }
 
             button {
-              padding: 10px 20px;
+              padding: 12px 20px;
               border: none;
               background: var(--rose600);
               border-radius: 8px;
               cursor: pointer;
               white-space: nowrap;
-              @include font(var(--white), 14px, 500);
+              @include font(var(--white), 16px, 500);
 
               @include devices("sm") {
                 width: 100%;
               }
 
               &:hover {
-                transform: translateY(-2px);
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
               }
 
@@ -290,9 +290,10 @@
               position: absolute;
               left: 0;
               top: 0;
-              width: 2px;
+              width: 3px;
               height: 100%;
               background: var(--rose600);
+              z-index: 0;
             }
 
             i {
@@ -317,6 +318,15 @@
                 @include font(rgba(51, 65, 85, 1), 16px, 400);
                 line-height: 1.5;
                 margin: 0;
+
+                span {
+                    text-decoration: underline;
+                    font-weight: 600;
+                    color: rgb(9, 23, 41);
+                    text-decoration-thickness: 1px;
+                    text-underline-offset: 5px;
+                    text-decoration-color: var(--rose600);
+                }
 
                 @include devices("sm") {
                   font-size: 14px;

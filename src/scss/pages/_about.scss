@@ -22,13 +22,14 @@
       img:first-child {
         width: 598px;
         height: 434px;
+        border-radius: 12px;
       }
 
       img:last-child {
         position: absolute;
         width: 412px;
         height: 302px;
-        bottom: -70px;
+        bottom: -90px;
         right: -140px;
         z-index: 2;
       }
@@ -98,8 +99,8 @@
       }
 
       &-stat {
-        width: 140px;
-        height: 140px;
+        width: 160px;
+        height: 160px;
         position: relative;
 
         display: flex;
@@ -110,7 +111,7 @@
           position: absolute;
           z-index: 2;
           text-align: center;
-          background: url("../../images/about-img-3.svg") center no-repeat;
+          background: url("@/images/about-img-3.svg") center no-repeat;
           background-size: auto;
           aspect-ratio: 1/1;
           width: 70%;
@@ -174,7 +175,7 @@
     }
     &-button {
       background-color: var(--rose50);
-      background-image: url("../../images/about-img-4.png");
+      background-image: url("@/images/about-img-4.png");
       background-repeat: no-repeat;
       margin-bottom: 50px;
       &-main {
@@ -232,8 +233,8 @@
         border-radius: 12px;
         padding: 20px;
         background-image:
-          url("../../images/about-img-6.png"),
-          url("../../images/about-img-5.png");
+          url("@/images/about-img-6.png"),
+          url("@/images/about-img-5.png");
 
         background-repeat: no-repeat, no-repeat;
 

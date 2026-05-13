@@ -100,7 +100,7 @@
                                     <b>Ma'lumot</b>
                                     <p>Ariza raqamingiz yoki telefon raqamingizni kiriting va natijani ko'ring.</p>
                                     <p>Qo'shimcha ma'lumot uchun operatorlarimiz siz bilan bog'lanadi yoki
-                                        qo'llab-quvvatlash markazi bilan bog'laning.</p>
+                                        <span>qo'llab-quvvatlash markazi</span> bilan bog'laning.</p>
                                 </div>
                             </div>
                         </div>
@@ -109,6 +109,28 @@
                 </div>
             </div>
         </div>
+
+
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.header');
+            if (!header) return;
+
+            const threshold = 30;
+
+            const updateHeader = () => {
+                if (window.scrollY > threshold) {
+                    header.classList.remove('page');
+                } else {
+                    header.classList.add('page');
+                }
+            };
+
+            updateHeader();
+
+            window.addEventListener('scroll', updateHeader, { passive: true });
+        });
+    </script>
         @@include('components/layout/footer.html')
 
 </body>
