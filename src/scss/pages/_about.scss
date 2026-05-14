@@ -7,6 +7,9 @@
     padding: 80px 0;
     @include devices("lg") {
       flex-direction: column;
+      gap: 0;
+      padding: 0;
+      margin-bottom: 50px;
     }
 
     @include devices("md") {
@@ -34,7 +37,27 @@
         z-index: 2;
       }
 
-      @include devices("lg") {
+       @include devices("lg") {
+        width: 100%;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+
+
+        img:first-child {
+          width: 100%;
+          height: auto;
+        }
+
+        img:last-child {
+          position: static;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      @include devices("md") {
         width: 100%;
         height: auto;
 

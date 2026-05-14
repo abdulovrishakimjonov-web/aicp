@@ -45,6 +45,10 @@
       font-family: "STIXVar";
       @include font(rgba(0, 0, 0, 1), 20px, 600);
       line-height: 1.4;
+
+      @include devices("md") {
+        font-size: 18px;
+      }
     }
   }
 
@@ -66,12 +70,19 @@
       display: flex;
       flex-direction: column;
       gap: 16px;
+      padding: 0;
 
       &-input {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 16px;
         margin-bottom: 16px;
+
+        @include devices("md") {
+          display: flex;
+          gap: 16px;
+          flex-direction: column;
+        }
 
         label {
           display: flex;
@@ -173,6 +184,13 @@
         i {
           font-size: 20px;
           color: var(--rose600);
+          @include devices("md") {
+            font-size: 18px;
+          }
+        }
+
+        @include devices("md") {
+          padding: 5px;
         }
       }
 

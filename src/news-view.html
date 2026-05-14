@@ -22,99 +22,124 @@
                             fashion maktablarining ilg‘or tajribasiga tayangan holda ishlab chiqilgan.
                             Akademiya bitiruvchilari sanoat talablariga mos, mustaqil fikrlovchi va yuqori malakali
                             mutaxassislar sifatida shakllanadi.</p>
-                            <div class="news-view-main-text-link">
-                                <div class="news-view-main-text-link-item">
-                                    <p><i class="i-time"></i>22.10.2023</p>
-                                    <p>/</p>
-                                    <p><i class="i-eye"></i>23</p>
-                                </div>
+                        <div class="news-view-main-text-link">
+                            <div class="news-view-main-text-link-item">
+                                <p><i class="i-time"></i>22.10.2023</p>
+                                <p>/</p>
+                                <p><i class="i-eye"></i>23</p>
                             </div>
+                            <div class="news-view__details">
+                                <label for="share" class="share-link" id="share-label" style="cursor:pointer;">
+
+                                    <script>
+  const patchYandexButton = () => {
+    const moreBtn = document.querySelector(
+      '.ya-share2__badge.ya-share2__badge_more'
+    );
+
+    const innerLink = document.querySelector(
+      '.ya-share2__link.ya-share2__link_more.ya-share2__link_more-button-type_short'
+    );
+
+    if (!moreBtn || !innerLink) return false;
+
+    innerLink.style.cssText = `
+      padding: 0;
+      text-decoration: none;
+      display: block;
+    `;
+
+    moreBtn.style.cssText = `
+      background: transparent;
+      padding: 0;
+      margin: 0;
+    `;
+
+    moreBtn.innerHTML = `
+      <span
+        class="news-view__share"
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          min-width: 90px;
+          padding: 14px 18px;
+          background: var(--white);
+          border: 1px solid var(--rose200);
+          border-radius: 14px;
+          box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+          color: var(--rose600);
+          transition: all 0.3s ease;
+        "
+      >
+        <i
+          class="i-share"
+          style="
+            font-size: 24px;
+            color: var(--rose600);
+            line-height: 1;
+          "
+        ></i>
+
+        <span
+          class="share"
+          style="
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.2;
+            text-align: center;
+            margin: 0;
+            color: var(--neutral700);
+          "
+        >
+          Поделиться
+        </span>
+      </span>
+    `;
+
+    return true;
+  };
+
+  const startPatch = () => {
+    if (patchYandexButton()) return;
+
+    const observer = new MutationObserver(() => {
+      if (patchYandexButton()) {
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    setTimeout(() => observer.disconnect(), 10000);
+  };
+
+  const script = document.createElement('script');
+  script.src = 'https://yastatic.net/share2/share.js';
+  script.onload = startPatch;
+
+  document.head.appendChild(script);
+</script>
+
+                                    <div id="share" class="ya-share2 share-link" data-lang="ru" data-curtain
+                                        data-limit="0" data-more-button-type="short"
+                                        data-services="telegram,twitter,whatsapp,linkedin">
+                                    </div>
+
+                                </label>
+                            </div>
+                        </div>
                     </div>
                     <img src="./images/news-view-img.svg" alt="">
                 </div>
-                    <div class="content">
-                        <div class="news-view__details">
-                            <label for="share" class="share-link" id="share-label" style="cursor:pointer;">
+                <div class="content">
 
-                                <script>
-                                    const patchYandexButton = () => {
-                                        const moreBtn = document.querySelector(
-                                            '.ya-share2__badge.ya-share2__badge_more'
-                                        );
-
-                                        const innerLink = document.querySelector(
-                                            '.ya-share2__link.ya-share2__link_more.ya-share2__link_more-button-type_short'
-                                        );
-
-                                        if (!moreBtn || !innerLink) return false;
-
-                                        innerLink.style.padding = '0';
-
-                                        moreBtn.style.cssText = `
-                        background: var(--white);
-                        color: var(--black1);
-                        border: 0;
-                        outline: 0;
-                    `;
-
-                                        moreBtn.innerHTML = `
-                        <span 
-                            class="news-view__share"
-                            style="
-                                color: var(--neutral700);
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: center;
-                                gap: 6px;
-                            "
-                        >
-                            <i class="i-share"></i>
-
-                            <span 
-                                class="share"
-                                style="
-                                    margin-top: 4px;
-                                    text-align: center;
-                                "
-                            >
-                                Поделиться
-                            </span>
-                        </span>
-                    `;
-
-                                        return true;
-                                    };
-
-                                    const startPatch = () => {
-                                        if (patchYandexButton()) return;
-
-                                        const observer = new MutationObserver(() => {
-                                            if (patchYandexButton()) observer.disconnect();
-                                        });
-
-                                        observer.observe(document.body, {
-                                            childList: true,
-                                            subtree: true
-                                        });
-
-                                        setTimeout(() => observer.disconnect(), 10000);
-                                    };
-
-                                    const script = document.createElement('script');
-                                    script.src = 'https://yastatic.net/share2/share.js';
-                                    script.onload = startPatch;
-
-                                    document.head.appendChild(script);
-                                </script>
-
-                                <div id="share" class="ya-share2 share-link" data-lang="ru" data-curtain data-limit="0"
-                                    data-more-button-type="short" data-services="telegram,twitter,whatsapp,linkedin">
-                                </div>
-
-                            </label>
-                        </div>
-                    </div>
+                </div>
                 <script>
                     (function () {
                         const images = [

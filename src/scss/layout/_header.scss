@@ -101,7 +101,7 @@
             border: none;
             background: none;
             i {
-              font-size: 24px;
+              font-size: 30px;
               color: var(--white);
             }
           }
@@ -135,11 +135,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-
+      gap: 16px;
       &-logo {
         filter: brightness(0.4);
         @include devices("sm") {
           width: 200px;
+          width: 50vw;
         }
       }
 
@@ -151,7 +152,7 @@
           gap: 20px;
         }
         @include devices("md") {
-          display: none
+          display: none;
         }
         a {
           @include font(var(--black1), 18px, 500);
@@ -159,7 +160,6 @@
           @include devices("lg") {
             font-size: 16px;
           }
-
         }
       }
 
@@ -238,7 +238,7 @@
           transition: all 0.3s ease;
 
           @include devices("sm") {
-            display: none;
+            // display: none;
           }
 
           &:hover {

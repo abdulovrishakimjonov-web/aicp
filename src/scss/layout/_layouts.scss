@@ -1,6 +1,7 @@
 @use "../config/mixins" as *;
 
 .layout {
+    flex: 1;
   .container {
     display: flex;
     flex-flow: column;

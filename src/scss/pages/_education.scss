@@ -193,7 +193,11 @@
             color: var(--rose600);
           }
           @include devices("md") {
-            font-size: 15px;
+            font-size: 30px;
+          }
+          @include devices("sm") {
+            font-size: 30px;
+            text-align: center
           }
         }
         p {
@@ -258,12 +262,6 @@
             i {
               font-size: 32px;
               color: var(--rose600);
-            }
-            @include devices("md") {
-              font-size: 20px;
-            }
-            @include devices("sm") {
-              font-size: 18px;
             }
           }
           p {

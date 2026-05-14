@@ -71,7 +71,7 @@
               gap: 6px;
 
               span {
-                @include font(rgba(51, 65, 85, 1), 18px, 500);
+                @include font(rgba(51, 65, 85, 1), 20px, 500);
               }
 
               input,
@@ -110,7 +110,7 @@
                 gap: 6px;
 
                 span {
-                  @include font(rgba(51, 65, 85, 1), 14px, 500);
+                  @include font(rgba(51, 65, 85, 1), 20px, 500);
                 }
 
                 .file-upload-box {

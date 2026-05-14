@@ -15,6 +15,17 @@
       justify-content: center;
     }
 
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+
+        @include devices(sm) {
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
     &-logo {
       img {
         width: 250px;
@@ -25,14 +36,9 @@
         @include font(var(--white), 20px, 400);
         opacity: 0.8;
 
-        @include devices("md") {
+        @include devices("sm") {
           display: none;
         }
-      }
-      @include devices("lg") {
-        display: flex;
-        gap: 20px;
-        align-items: center;
       }
     }
     &-link {
@@ -40,9 +46,10 @@
       flex-direction: column;
       gap: 16px;
 
-      @include devices("lg") {
+      @include devices(sm) {
         flex-direction: row;
       }
+
 
       &-text {
         display: flex;

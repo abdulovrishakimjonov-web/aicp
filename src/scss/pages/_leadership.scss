@@ -141,6 +141,7 @@
             display: flex;
             align-items: center;
             gap: 32px;
+            flex-wrap: wrap;
 
             @include devices("sm") {
               flex-direction: column;
@@ -299,7 +300,10 @@
 
     &-image {
       width: 320px;
-      flex-shrink: 0;
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
 
       @include devices("lg") {
         width: 280px;
@@ -307,6 +311,7 @@
 
       @include devices("md") {
         width: 240px;
+        gap: 16px;
       }
 
       @include devices("sm") {
@@ -315,7 +320,7 @@
 
       img {
         width: 100%;
-        height: 100%;
+        height: auto;
         max-height: 420px;
         object-fit: cover;
         border-radius: 16px;
@@ -327,6 +332,28 @@
 
         @include devices("sm") {
           max-height: 280px;
+          border-radius: 12px;
+        }
+      }
+
+      .leadership-page-main-cards-card {
+        width: 100%;
+        background: var(--rose600);
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include devices("md") {
+          padding: 20px;
+          gap: 16px;
+        }
+
+        @include devices("sm") {
+          padding: 16px;
           border-radius: 12px;
         }
       }

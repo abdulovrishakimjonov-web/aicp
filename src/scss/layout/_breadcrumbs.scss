@@ -1,72 +1,43 @@
 @use "../config/mixins" as *;
 
 .breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   margin-bottom: 50px;
-
-  @include devices("lg") {
-    margin-top: 60px;
-    margin-bottom: 80px;
+  overflow: hidden;
+  width: 100%;
+  height: 340px;
+  padding-top: var(--height-header);
+  @include devices(md) {
+    height: 300px;
   }
-  @include devices("md") {
-    margin-top: 75px;
-  }
 
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: #0000004d;
+    z-index: 2;
+  }
   &-img {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }
+  &-content {
     position: relative;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
-    }
-
-    &-overlay {
-      position: absolute;
-      inset: 0; 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      margin-top: 30px;
-      text-align: center;
-
-      &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.35);
-        z-index: 1;
-      }
-
-      a {
-        position: relative;
-        z-index: 2;
-        top: 0; 
-        
-        font-family: "STIXVar";
-        text-decoration: none;
-        line-height: 1.2;
-
-        @include font(var(--white), 48px, 600);
-
-        @include devices("lg") {
-          font-size: 40px;
-          margin-top: 30px;
-        }
-
-        @include devices("md") {
-          font-size: 32px;
-        }
-
-        @include devices("sm") {
-          font-size: 24px;
-        }
-
-        @include devices("xs") {
-          font-size: 20px;
-        }
-      }
-    }
+    font-family: "STIXVar";
+    @include font(var(--white), 48px, 600);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+    align-items: center;
   }
 }
