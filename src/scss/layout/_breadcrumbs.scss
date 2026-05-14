@@ -1,33 +1,71 @@
 @use "../config/mixins" as *;
+
 .breadcrumbs {
   margin-bottom: 50px;
-  @include devices("md") {
+
+  @include devices("lg") {
+    margin-top: 60px;
     margin-bottom: 80px;
   }
+  @include devices("md") {
+    margin-top: 75px;
+  }
+
   &-img {
     position: relative;
+    overflow: hidden;
 
     img {
       width: 100%;
       display: block;
+      object-fit: cover;
     }
 
     &-overlay {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0; 
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+        z-index: 1;
+      }
 
       a {
-        font-family: "STIXVar";
         position: relative;
-        top: 45px;
-        @include font(var(--white), 48px, 600);
+        z-index: 2;
+        top: 0; 
+        
+        font-family: "STIXVar";
         text-decoration: none;
+        line-height: 1.2;
+
+        @include font(var(--white), 48px, 600);
+
+        @include devices("lg") {
+          font-size: 40px;
+          margin-top: 30px;
+        }
+
+        @include devices("md") {
+          font-size: 32px;
+        }
+
+        @include devices("sm") {
+          font-size: 24px;
+        }
+
+        @include devices("xs") {
+          font-size: 20px;
+        }
       }
     }
   }
