@@ -1,298 +1,319 @@
 @use "../config/mixins" as *;
 
 .about {
-  &-section {
-    display: flex;
-    gap: 160px;
-    padding: 80px 0;
-    @include devices("lg") {
-      flex-direction: column;
-      gap: 0;
-      padding: 0;
-      margin-bottom: 50px;
-    }
-
-    @include devices("md") {
-      gap: 30px;
-    }
-
-    &-img {
-      position: relative;
-      flex-shrink: 0;
-      width: 460px;
-      height: 420px;
-
-      img:first-child {
-        width: 598px;
-        height: 434px;
-        border-radius: 12px;
-      }
-
-      img:last-child {
-        position: absolute;
-        width: 412px;
-        height: 302px;
-        bottom: -90px;
-        right: -140px;
-        z-index: 2;
-      }
-
-       @include devices("lg") {
-        width: 100%;
-        display: grid;
-        align-items: center;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-
-
-        img:first-child {
-          width: 100%;
-          height: auto;
-        }
-
-        img:last-child {
-          position: static;
-          width: 100%;
-          height: auto;
-        }
-      }
-
-      @include devices("md") {
-        width: 100%;
-        height: auto;
-
+    &-section {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        gap: 160px;
+        padding: 80px 0;
 
-        img:first-child {
-          width: 100%;
-          height: auto;
-        }
-
-        img:last-child {
-          position: static;
-          width: 100%;
-          height: auto;
-          margin-top: 20px;
-        }
-      }
-    }
-
-    &-text {
-      h4 {
-        @include font(var(--slate900), 26px, 600);
-        margin-bottom: 16px;
-        font-family: "STIXVar";
-      }
-
-      p {
-        @include font(var(--slate700), 20px, 400);
-        margin-bottom: 16px;
-        line-height: 24px;
-      }
-
-      .about-btn {
-        margin-top: 10px;
-        margin-bottom: 32px;
-        padding: 12px 24px;
-        border-radius: 10px;
-        border: none;
-        background: var(--rose600);
-        cursor: pointer;
-        transition: all 0.3s ease;
-        @include font(var(--white), 16px, 500);
-
-        &:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        &:active {
-          transform: scale(0.97);
-        }
-      }
-
-      &-stats {
-        display: flex;
-        gap: 32px;
-        flex-wrap: wrap;
         @include devices("lg") {
-          justify-content: center;
+            flex-direction: column;
+            gap: 0;
+            padding: 0;
+            margin-bottom: 50px;
         }
-      }
 
-      &-stat {
-        width: 160px;
-        height: 160px;
-        position: relative;
+        @include devices("md") {
+            gap: 30px;
+        }
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        &-img {
+            position: relative;
+            flex-shrink: 0;
+            width: 460px;
+            height: 420px;
+
+            img:first-child {
+                width: 598px;
+                height: 434px;
+                border-radius: 12px;
+            }
+
+            img:last-child {
+                position: absolute;
+                width: 412px;
+                height: 302px;
+                bottom: -90px;
+                right: -140px;
+                z-index: 2;
+            }
+
+            @include devices("lg") {
+                width: 100%;
+                display: grid;
+                align-items: center;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+
+                img:first-child {
+                    width: 100%;
+                    height: auto;
+                }
+
+                img:last-child {
+                    position: static;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            @include devices("md") {
+                width: 100%;
+                height: auto;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img:first-child {
+                    width: 100%;
+                    height: auto;
+                }
+
+                img:last-child {
+                    position: static;
+                    width: 100%;
+                    height: auto;
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        &-text {
+            h4 {
+                @include font(var(--slate900), 26px, 600);
+                margin-bottom: 16px;
+                font-family: "STIXVar";
+            }
+
+            p {
+                @include font(var(--slate700), 20px, 400);
+                margin-bottom: 16px;
+                line-height: 24px;
+            }
+
+            .about-btn {
+                margin-top: 10px;
+                margin-bottom: 32px;
+                padding: 12px 24px;
+                border-radius: 10px;
+                border: none;
+                background: var(--rose600);
+                cursor: pointer;
+                transition: all 0.3s ease;
+                @include font(var(--white), 16px, 500);
+
+                &:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+                }
+
+                &:active {
+                    transform: scale(0.97);
+                }
+            }
+
+            &-stats {
+                display: flex;
+                gap: 32px;
+                flex-wrap: wrap;
+
+                @include devices("lg") {
+                    justify-content: center;
+                }
+            }
+
+            &-stat {
+                width: 160px;
+                height: 160px;
+                position: relative;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &-content {
+                    position: absolute;
+                    z-index: 2;
+                    text-align: center;
+                    background: url("@/images/about-img-3.svg") center no-repeat;
+                    background-size: auto;
+                    aspect-ratio: 1/1;
+                    width: 70%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    background-size: contain;
+                }
+
+                h3 {
+                    @include font(var(--rose600), 36px, 700);
+                    font-family: "STIXVar";
+                }
+
+                p {
+                    @include font(var(--slate600), 18px, 400);
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    &-page {
+        margin-bottom: 100px;
 
         &-content {
-          position: absolute;
-          z-index: 2;
-          text-align: center;
-          background: url("@/images/about-img-3.svg") center no-repeat;
-          background-size: auto;
-          aspect-ratio: 1/1;
-          width: 70%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          background-size: contain;
+            display: flex;
+            justify-content: space-between;
+            gap: 19px;
+            margin-bottom: 50px;
+
+            @include devices("lg") {
+                flex-direction: column;
+            }
+
+            &-left {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                h4 {
+                    font-family: "STIXVar";
+                    @include font(var(--rose600), 26px, 600);
+                }
+
+                p {
+                    @include font(rgba(51, 65, 85, 1), 20px, 400);
+                    margin-bottom: 5px;
+
+                    @include devices("md") {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            &-right {
+                img {
+                    flex-shrink: 0;
+                }
+            }
         }
 
-        h3 {
-          @include font(var(--rose600), 36px, 700);
-          font-family: "STIXVar";
+        &-button {
+            background-color: var(--rose50);
+            background-image: url("@/images/about-img-4.png");
+            background-repeat: no-repeat;
+            margin-bottom: 50px;
+
+            &-main {
+                display: flex;
+                align-items: center;
+                padding: 28px 0px;
+                justify-content: space-around;
+
+                @include devices("sm") {
+                    justify-content: space-between;
+                }
+
+                @include devices("xs") {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 10px;
+                }
+            }
+
+            &-number {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                h2 {
+                    font-family: "STIXVar";
+                    @include font(var(--rose600), 44px, 700);
+
+                    @include devices("sm") {
+                        font-size: 30px;
+                    }
+                }
+
+                p {
+                    @include font(rgba(71, 85, 105, 1), 20px, 400);
+
+                    @include devices("sm") {
+                        font-size: 18px;
+                    }
+                }
+            }
         }
 
-        p {
-          @include font(var(--slate600), 18px, 400);
-          margin: 0;
+        &-cards {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+
+            @include devices("lg") {
+                flex-direction: column;
+            }
+
+            &-card:nth-child(1) {
+                background-color: var(--rose100);
+            }
+
+            &-card:nth-child(2) {
+                background-color: var(--pink100);
+            }
+
+            &-card {
+                border-radius: 12px;
+                padding: 20px;
+                background-image:
+                    url("@/images/about-img-6.png"), url("@/images/about-img-5.png");
+
+                background-repeat: no-repeat, no-repeat;
+
+                background-position:
+                    left bottom,
+                    right top;
+
+                h3 {
+                    font-family: "STIXVar";
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    @include font(rgba(15, 23, 42, 1), 32px, 600);
+                    margin-bottom: 8px;
+
+                    i {
+                        font-size: 32px;
+                        color: var(--rose600);
+                    }
+
+                    @include devices("md") {
+                        font-size: 24px;
+                    }
+
+                    @include devices("sm") {
+                        font-size: 20px;
+                    }
+                }
+
+                p {
+                    @include font(rgba(51, 65, 85, 1), 20px, 400);
+
+                    @include devices("md") {
+                        font-size: 18px;
+                    }
+
+                    @include devices("sm") {
+                        font-size: 16px;
+                    }
+                }
+            }
         }
-      }
     }
-  }
-
-  &-page {
-    margin-bottom: 100px;
-    &-content {
-      display: flex;
-      justify-content: space-between;
-      gap: 19px;
-      margin-bottom: 50px;
-
-      @include devices("lg") {
-        flex-direction: column;
-      }
-
-      &-left {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-
-        h4 {
-          font-family: "STIXVar";
-          @include font(var(--rose600), 26px, 600);
-        }
-        p {
-          @include font(rgba(51, 65, 85, 1), 20px, 400);
-          margin-bottom: 5px;
-
-          @include devices("md") {
-            font-size: 18px;
-          }
-        }
-      }
-      &-right {
-        img {
-          flex-shrink: 0;
-        }
-      }
-    }
-    &-button {
-      background-color: var(--rose50);
-      background-image: url("@/images/about-img-4.png");
-      background-repeat: no-repeat;
-      margin-bottom: 50px;
-      &-main {
-        display: flex;
-        align-items: center;
-        padding: 28px 0px;
-        justify-content: space-around;
-        @include devices("sm") {
-          justify-content: space-between;
-        }
-        @include devices("xs") {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 10px;
-        }
-      }
-      &-number {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        h2 {
-          font-family: "STIXVar";
-          @include font(var(--rose600), 44px, 700);
-
-          @include devices("sm") {
-            font-size: 30px;
-          }
-        }
-        p {
-          @include font(rgba(71, 85, 105, 1), 20px, 400);
-          @include devices("sm") {
-            font-size: 18px;
-          }
-        }
-      }
-    }
-    &-cards {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-
-      @include devices("lg") {
-        flex-direction: column;
-      }
-
-      &-card:nth-child(1) {
-        background-color: var(--rose100);
-      }
-      &-card:nth-child(2) {
-        background-color: var(--pink100);
-      }
-      &-card {
-        border-radius: 12px;
-        padding: 20px;
-        background-image:
-          url("@/images/about-img-6.png"),
-          url("@/images/about-img-5.png");
-
-        background-repeat: no-repeat, no-repeat;
-
-        background-position:
-          left bottom,
-          right top;
-        h3 {
-          font-family: "STIXVar";
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          @include font(rgba(15, 23, 42, 1), 32px, 600);
-          margin-bottom: 8px;
-          i {
-            font-size: 32px;
-            color: var(--rose600);
-          }
-
-          @include devices("md") {
-            font-size: 24px;
-          }
-          @include devices("sm") {
-            font-size: 20px;
-          }
-        }
-        p {
-          @include font(rgba(51, 65, 85, 1), 20px, 400);
-          @include devices("md") {
-            font-size: 18px;
-          }
-          @include devices("sm") {
-            font-size: 16px;
-          }
-        }
-      }
-    }
-  }
 }

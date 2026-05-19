@@ -1,429 +1,463 @@
 @use "../config/mixins" as *;
+
 .education {
-  &-section {
-    margin-bottom: 80px;
-
-    @include devices("md") {
-      margin-bottom: 40px;
-    }
-    @include devices("sm") {
-      margin-bottom: 25px;
-    }
-
-    .container {
-      display: flex;
-      align-items: center;
-      gap: 92px;
-
-      @include devices("lg") {
-        display: block;
-        gap: 40px;
-      }
-    }
-
-    &-text {
-      @include devices("lg") {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 16px;
-      }
-
-      h4 {
-        font-family: "STIXVar";
-        font-size: 36px;
-        font-weight: 600;
-        color: var(--black);
-        margin-bottom: 10px;
-
-        span {
-          color: var(--rose600);
-        }
+    &-section {
+        margin-bottom: 80px;
 
         @include devices("md") {
-          font-size: 28px;
+            margin-bottom: 40px;
         }
 
         @include devices("sm") {
-          font-size: 22px;
-        }
-      }
-
-      p {
-        @include font(var(--slate700), 20px, 400);
-        margin-bottom: 24px;
-        width: 527px;
-
-        @include devices("lg") {
-          width: 100%;
+            margin-bottom: 25px;
         }
 
-        @include devices("md") {
-          font-size: 16px;
-        }
-
-        @include devices("sm") {
-          font-size: 14px;
-        }
-      }
-
-      button {
-        @include font(var(--white), 18px, 500);
-        padding: 10px 24px;
-        border-radius: 12px;
-        border: 1px solid;
-        background-color: var(--rose600);
-        transition: all 0.3s ease;
-
-        @include devices("sm") {
-          font-size: 14px;
-          padding: 8px 18px;
-        }
-
-        &:hover {
-         box-shadow: 0 10px 20px rgba(0, 0.10, 0.10, 0.15);
-        }
-
-        &:active {
-          transform: scale(0.97);
-        }
-      }
-    }
-
-    &-cards {
-      display: flex;
-      align-items: stretch;
-      gap: 16px;
-
-      @include devices("md") {
-        flex-direction: column;
-      }
-
-      &-card:nth-child(1) {
-        background-color: var(--rose200);
-      }
-
-      &-card:nth-child(2) {
-        background-color: var(--pink200);
-      }
-
-      &-card {
-        padding: 24px 23px 20px 23px;
-        border-radius: 12px;
-        width: 100%;
-
-        background-image:
-          url("@/images/education-img-1.svg"),
-          url("@/images/education-img-2.svg");
-
-        background-position:
-          left center,
-          right bottom;
-        background-repeat: no-repeat;
-
-        @include devices("sm") {
-          padding: 18px;
-        }
-
-        h4 {
-          font-family: "STIXVar";
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          @include font(var(--slate900), 24px, 600);
-          margin-bottom: 6px;
-
-          @include devices("sm") {
-            font-size: 18px;
-          }
-
-          i {
-            font-size: 32px;
-            color: var(--rose600);
-
-            @include devices("sm") {
-              font-size: 24px;
-            }
-          }
-        }
-
-        p {
-          @include font(var(--slate700), 18px, 400);
-          margin-bottom: 33px;
-
-          @include devices("sm") {
-            font-size: 14px;
-          }
-        }
-
-        a {
-          @include font(var(--rose600), 18px, 500);
-          display: flex;
-          align-items: center;
-          gap: 4px;
-
-          @include devices("sm") {
-            font-size: 14px;
-          }
-        }
-      }
-    }
-  }
-  &-page {
-    &-main {
-      display: flex;
-      align-items: center;
-      gap: 92px;
-      margin-bottom: 80px;
-
-      @include devices("lg") {
-        flex-direction: column;
-        gap: 30px;
-      }
-      &-text {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        h3 {
-          @include font(rgba(15, 23, 42, 1), 36px, 600);
-          font-family: "STIXVar";
-          span {
-            color: var(--rose600);
-          }
-          @include devices("md") {
-            font-size: 30px;
-          }
-          @include devices("sm") {
-            font-size: 30px;
-            text-align: center
-          }
-        }
-        p {
-          @include font(rgba(51, 65, 85, 1), 20px, 400);
-          @include devices("sm") {
-            font-size: 18px;
-            text-align: center;
-          }
-        }
-      }
-      &-cards {
-        display: flex;
-        height: auto;
-        gap: 16px;
-
-        @include devices("md") {
-          flex-direction: column;
-        }
-
-        &-card:nth-child(1) {
-          background-color: var(--rose200);
-        }
-        &-card:nth-child(2) {
-          background-color: var(--pink200);
-        }
-        &-card {
-          padding: 24px 23px 20px 23px;
-          border-radius: 12px;
-          display: flex;
-          align-items: stretch;
-          flex-direction: column;
-
-          width: 100%;
-          background-image:
-            url("@/images/education-img-4.png"),
-            url("@/images/education-img-2.svg");
-          background-position:
-            left center,
-            right bottom;
-          background-repeat: no-repeat;
-
-          &-link {
+        .container {
             display: flex;
             align-items: center;
-            margin-top: auto;
-            justify-content: space-between;
-            a {
-              @include font(var(--rose600), 18px, 500);
-              display: flex;
-              align-items: center;
-              gap: 4px;
-            }
-          }
+            gap: 92px;
 
-          h4 {
-            font-family: "STIXVar";
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            @include font(var(--slate900), 24px, 600);
-            margin-bottom: 6px;
-            i {
-              font-size: 32px;
-              color: var(--rose600);
+            @include devices("lg") {
+                display: block;
+                gap: 40px;
             }
-          }
-          p {
-            @include font(var(--slate700), 18px, 400);
-            margin-bottom: 33px;
+        }
+
+        &-text {
+            @include devices("lg") {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 16px;
+            }
+
+            h4 {
+                font-family: "STIXVar";
+                font-size: 36px;
+                font-weight: 600;
+                color: var(--black);
+                margin-bottom: 10px;
+
+                span {
+                    color: var(--rose600);
+                }
+
+                @include devices("md") {
+                    font-size: 28px;
+                }
+
+                @include devices("sm") {
+                    font-size: 22px;
+                }
+            }
+
+            p {
+                @include font(var(--slate700), 20px, 400);
+                margin-bottom: 24px;
+                width: 527px;
+
+                @include devices("lg") {
+                    width: 100%;
+                }
+
+                @include devices("md") {
+                    font-size: 16px;
+                }
+
+                @include devices("sm") {
+                    font-size: 14px;
+                }
+            }
+
+            button {
+                @include font(var(--white), 18px, 500);
+                padding: 10px 24px;
+                border-radius: 12px;
+                border: 1px solid;
+                background-color: var(--rose600);
+                transition: all 0.3s ease;
+
+                @include devices("sm") {
+                    font-size: 14px;
+                    padding: 8px 18px;
+                }
+
+                &:hover {
+                    box-shadow: 0 10px 20px rgba(0, 0.1, 0.1, 0.15);
+                }
+
+                &:active {
+                    transform: scale(0.97);
+                }
+            }
+        }
+
+        &-cards {
+            display: flex;
+            align-items: stretch;
+            gap: 16px;
+
             @include devices("md") {
-              font-size: 16px;
+                flex-direction: column;
             }
-          }
+
+            &-card:nth-child(1) {
+                background-color: var(--rose200);
+            }
+
+            &-card:nth-child(2) {
+                background-color: var(--pink200);
+            }
+
+            &-card {
+                padding: 24px 23px 20px 23px;
+                border-radius: 12px;
+                width: 100%;
+
+                background-image:
+                    url("@/images/education-img-1.svg"),
+                    url("@/images/education-img-2.svg");
+
+                background-position:
+                    left center,
+                    right bottom;
+                background-repeat: no-repeat;
+
+                @include devices("sm") {
+                    padding: 18px;
+                }
+
+                h4 {
+                    font-family: "STIXVar";
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    @include font(var(--slate900), 24px, 600);
+                    margin-bottom: 6px;
+
+                    @include devices("sm") {
+                        font-size: 18px;
+                    }
+
+                    i {
+                        font-size: 32px;
+                        color: var(--rose600);
+
+                        @include devices("sm") {
+                            font-size: 24px;
+                        }
+                    }
+                }
+
+                p {
+                    @include font(var(--slate700), 18px, 400);
+                    margin-bottom: 33px;
+
+                    @include devices("sm") {
+                        font-size: 14px;
+                    }
+                }
+
+                a {
+                    @include font(var(--rose600), 18px, 500);
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+
+                    @include devices("sm") {
+                        font-size: 14px;
+                    }
+                }
+            }
         }
-      }
     }
 
-    &-wrapper {
-      margin-bottom: 80px;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      h3 {
-        font-family: "STIXVar";
-        @include font(rgba(15, 23, 42, 1), 36px, 600);
-        text-align: center;
-        span {
-          color: var(--rose600);
-        }
-        @include devices("md") {
-          font-size: 30px;
-        }
-        @include devices("sm") {
-          font-size: 22px;
-        }
-      }
-      &-item {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        justify-content: space-between;
+    &-page {
+        &-main {
+            display: flex;
+            align-items: center;
+            gap: 92px;
+            margin-bottom: 80px;
 
-        @include devices("lg") {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 16px;
-        }
-        @include devices("md") {
-          display: grid;
-          grid-template-columns: repeat(1, 1fr);
-          gap: 16px;
-        }
-        &-card {
-          padding: 20px;
-          border-radius: 12px;
-          background-color: var(--rose100);
-
-          background-image:
-            url("@/images/education-img-5.png"),
-            url("@/images/education-img-6.png");
-
-          background-repeat: no-repeat, no-repeat;
-
-          background-position:
-            top right,
-            bottom left;
-
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-
-          img {
-            width: 52px;
-            margin-bottom: 16px;
-          }
-
-          b {
-            font-family: "STIXVar";
-            @include font(var(--rose600), 20px, 600);
-            margin-bottom: 4px;
-            @include devices("sm") {
-              font-size: 18px;
+            @include devices("lg") {
+                flex-direction: column;
+                gap: 30px;
             }
-          }
 
-          p {
-            @include font(rgba(51, 65, 85, 1), 18px, 400);
-            @include devices("sm") {
-              font-size: 16px;
+            &-text {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                h3 {
+                    @include font(rgba(15, 23, 42, 1), 36px, 600);
+                    font-family: "STIXVar";
+
+                    span {
+                        color: var(--rose600);
+                    }
+
+                    @include devices("md") {
+                        font-size: 30px;
+                    }
+
+                    @include devices("sm") {
+                        font-size: 30px;
+                        text-align: center;
+                    }
+                }
+
+                p {
+                    @include font(rgba(51, 65, 85, 1), 20px, 400);
+
+                    @include devices("sm") {
+                        font-size: 18px;
+                        text-align: center;
+                    }
+                }
             }
-          }
-        }
-      }
-    }
 
-    &-bottom {
-      background-color: rgba(241, 245, 249, 0.7);
-      padding: 40px 0px 0px 0px;
-      margin-bottom: 100px;
-      h2 {
-        font-family: "STIXVar";
-        @include font(rgba(15, 23, 42, 1), 36px, 600);
-        margin-bottom: 24px;
-        text-align: center;
-        span {
-          color: var(--rose600);
-        }
-        @include devices("md") {
-          font-size: 30px;
-        }
-        @include devices("sm") {
-          font-size: 22px;
-        }
-      }
+            &-cards {
+                display: flex;
+                height: auto;
+                gap: 16px;
 
-      &-main {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 23px;
-        margin-bottom: 40px;
+                @include devices("md") {
+                    flex-direction: column;
+                }
 
-        @include devices("lg") {
-          grid-template-columns: repeat(2, 1fr);
+                &-card:nth-child(1) {
+                    background-color: var(--rose200);
+                }
+
+                &-card:nth-child(2) {
+                    background-color: var(--pink200);
+                }
+
+                &-card {
+                    padding: 24px 23px 20px 23px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: stretch;
+                    flex-direction: column;
+
+                    width: 100%;
+                    background-image:
+                        url("@/images/education-img-4.png"),
+                        url("@/images/education-img-2.svg");
+                    background-position:
+                        left center,
+                        right bottom;
+                    background-repeat: no-repeat;
+
+                    &-link {
+                        display: flex;
+                        align-items: center;
+                        margin-top: auto;
+                        justify-content: space-between;
+
+                        a {
+                            @include font(var(--rose600), 18px, 500);
+                            display: flex;
+                            align-items: center;
+                            gap: 4px;
+                        }
+                    }
+
+                    h4 {
+                        font-family: "STIXVar";
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        @include font(var(--slate900), 24px, 600);
+                        margin-bottom: 6px;
+
+                        i {
+                            font-size: 32px;
+                            color: var(--rose600);
+                        }
+                    }
+
+                    p {
+                        @include font(var(--slate700), 18px, 400);
+                        margin-bottom: 33px;
+
+                        @include devices("md") {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
         }
-        @include devices("md") {
-          grid-template-columns: repeat(1, 1fr);
-        }
-        &-item {
-          display: flex;
-          align-items: flex-start;
-          flex-direction: column;
-          gap: 16px;
-          position: relative;
-          padding: 20px;
 
-          &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 3px;
-            height: 100%;
-            z-index: 0;
-            background: var(--pink600);
-          }
-
-          img {
-            width: 52px;
-          }
-
-          &-text {
+        &-wrapper {
+            margin-bottom: 80px;
             display: flex;
             flex-direction: column;
-            gap: 4px;
-            b {
-              font-family: "STIXVar";
-              @include font(var(--black), 20px, 600);
+            gap: 24px;
+
+            h3 {
+                font-family: "STIXVar";
+                @include font(rgba(15, 23, 42, 1), 36px, 600);
+                text-align: center;
+
+                span {
+                    color: var(--rose600);
+                }
+
+                @include devices("md") {
+                    font-size: 30px;
+                }
+
+                @include devices("sm") {
+                    font-size: 22px;
+                }
             }
-            p {
-              @include font(rgba(51, 65, 85, 1), 18px, 400);
+
+            &-item {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                justify-content: space-between;
+
+                @include devices("lg") {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 16px;
+                }
+
+                @include devices("md") {
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    gap: 16px;
+                }
+
+                &-card {
+                    padding: 20px;
+                    border-radius: 12px;
+                    background-color: var(--rose100);
+
+                    background-image:
+                        url("@/images/education-img-5.png"),
+                        url("@/images/education-img-6.png");
+
+                    background-repeat: no-repeat, no-repeat;
+
+                    background-position:
+                        top right,
+                        bottom left;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+
+                    img {
+                        width: 52px;
+                        margin-bottom: 16px;
+                    }
+
+                    b {
+                        font-family: "STIXVar";
+                        @include font(var(--rose600), 20px, 600);
+                        margin-bottom: 4px;
+
+                        @include devices("sm") {
+                            font-size: 18px;
+                        }
+                    }
+
+                    p {
+                        @include font(rgba(51, 65, 85, 1), 18px, 400);
+
+                        @include devices("sm") {
+                            font-size: 16px;
+                        }
+                    }
+                }
             }
-          }
         }
-      }
+
+        &-bottom {
+            background-color: rgba(241, 245, 249, 0.7);
+            padding: 40px 0px 0px 0px;
+            margin-bottom: 100px;
+
+            h2 {
+                font-family: "STIXVar";
+                @include font(rgba(15, 23, 42, 1), 36px, 600);
+                margin-bottom: 24px;
+                text-align: center;
+
+                span {
+                    color: var(--rose600);
+                }
+
+                @include devices("md") {
+                    font-size: 30px;
+                }
+
+                @include devices("sm") {
+                    font-size: 22px;
+                }
+            }
+
+            &-main {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 23px;
+                margin-bottom: 40px;
+
+                @include devices("lg") {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                @include devices("md") {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+
+                &-item {
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    gap: 16px;
+                    position: relative;
+                    padding: 20px;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 3px;
+                        height: 100%;
+                        z-index: 0;
+                        background: var(--pink600);
+                    }
+
+                    img {
+                        width: 52px;
+                    }
+
+                    &-text {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+
+                        b {
+                            font-family: "STIXVar";
+                            @include font(var(--black), 20px, 600);
+                        }
+
+                        p {
+                            @include font(rgba(51, 65, 85, 1), 18px, 400);
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
 }

@@ -2,54 +2,55 @@
 
 .layout {
     flex: 1;
-  .container {
-    display: flex;
-    flex-flow: column;
-    padding: 0 16px;
 
-    @include devices(md) {
-      margin-bottom: 60px;
-    }
-
-    @include devices(sm) {
-      margin-bottom: 40px;
-    }
-  }
-
-  &-sidebar {
-    width: var(--width-sidebar);
-    position: relative;
-    flex: 0 0 auto;
-
-    @media (max-width: 992px) {
-      margin: 0;
-      width: 100%;
-    }
-  }
-
-  &-content {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-    max-width: calc(100% - var(--width-sidebar) - 16px);
-
-    @media (max-width: 992px) {
-      margin-bottom: 20px;
-      max-width: 100%;
-    }
-  }
-
-  &-index {
     .container {
-      padding: 60px 16px;
+        display: flex;
+        flex-flow: column;
+        padding: 0 16px;
 
-      @include devices(md) {
-        padding: 40px 16px;
-      }
+        @include devices(md) {
+            margin-bottom: 60px;
+        }
 
-      @include devices(sm) {
-        padding: 20px 8px;
-      }
+        @include devices(sm) {
+            margin-bottom: 40px;
+        }
     }
-  }
+
+    &-sidebar {
+        width: var(--width-sidebar);
+        position: relative;
+        flex: 0 0 auto;
+
+        @media (max-width: 992px) {
+            margin: 0;
+            width: 100%;
+        }
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        max-width: calc(100% - var(--width-sidebar) - 16px);
+
+        @media (max-width: 992px) {
+            margin-bottom: 20px;
+            max-width: 100%;
+        }
+    }
+
+    &-index {
+        .container {
+            padding: 60px 16px;
+
+            @include devices(md) {
+                padding: 40px 16px;
+            }
+
+            @include devices(sm) {
+                padding: 20px 8px;
+            }
+        }
+    }
 }
